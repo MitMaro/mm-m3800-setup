@@ -1,0 +1,7 @@
+name             'user'
+maintainer       'Tim Oram'
+maintainer_email 'mitmaro@gmail.com'
+license          'ISC'
+description      'Installs and configures user stuff'
+long_description 'Installs and configures user stuff'
+version          '1.0.0'

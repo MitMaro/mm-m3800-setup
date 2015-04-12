@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+site 'https://supermarket.getchef.com/api/v1'
+
+cookbook 'apt'
+cookbook 'system',
+	:path => 'src/cookbooks/system'
+cookbook 'user',
+	:path => 'src/cookbooks/user'
+

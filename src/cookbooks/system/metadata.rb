@@ -1,0 +1,8 @@
+name             'system'
+maintainer       'Tim Oram'
+maintainer_email 'mitmaro@gmail.com'
+license          'ISC'
+description      'Installs and configures system stuff'
+long_description 'Installs and configures system stuff'
+version          '1.0.0'
+depends          'apt'
