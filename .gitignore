@@ -1,0 +1,8 @@
+tmp
+nodes
+system_cache
+system_node
+user_cache
+user_node
+Cheffile.lock
+/cookbooks
