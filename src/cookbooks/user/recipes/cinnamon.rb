@@ -1,7 +1,12 @@
 require 'json'
 
 template "/home/mitmaro/.cinnamon/configs/panel-launchers@cinnamon.org/2.json" do
-	source "cinnamon/configs/panel-launchers@cinnamon.org/2.json"
+	source "cinnamon/configs/panel-launchers@cinnamon.org"
+	action :create
+end
+
+template "/home/mitmaro/.cinnamon/configs/calendar@cinnamon.org/13.json" do
+	source "cinnamon/configs/calendar@cinnamon.org"
 	action :create
 end
 
