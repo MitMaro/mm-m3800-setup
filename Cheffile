@@ -2,6 +2,8 @@
 site 'https://supermarket.getchef.com/api/v1'
 
 cookbook 'apt'
+cookbook 'gsettings',
+	:path => 'src/cookbooks/gsettings'
 cookbook 'system',
 	:path => 'src/cookbooks/system'
 cookbook 'user',
