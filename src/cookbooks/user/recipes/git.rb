@@ -1,4 +1,4 @@
 template "/home/mitmaro/.gitconfig" do
-	source ".gitconfig.erb"
+	source "git/.gitconfig.erb"
 	action :create
 end
