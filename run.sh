@@ -45,13 +45,13 @@ done
 
 ./setup.sh
 
-librarian-chef install
+librarian-chef install || exit $?
 
 if [[ $system == 'true' ]] ; then
 	sudo --prompt="Root required, please enter password: " --validate
-	sudo chef-client --config system_client.rb --local-mode --runlist 'recipe[system]'
+	sudo chef-client --config system_client.rb --local-mode --runlist 'recipe[system]' || exit $?
 fi
 
 if [[ $user == 'true' ]] ; then
-	chef-client --config user_client.rb --local-mode --runlist 'recipe[user]'
+	chef-client --config user_client.rb --local-mode --runlist 'recipe[user]' || exit $?
 fi
