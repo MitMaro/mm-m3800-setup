@@ -1,0 +1,17 @@
+
+$include /etc/inputrc
+
+# show tab completions sooner
+set show-all-if-ambiguous on
+
+# ignore case in tab completions
+set completion-ignore-case on
+
+# exapand the ~ to the full path
+set expand-tilde on
+
+# redefine history search (ie. up/down keyboard action)
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+"\C-b": backward-word
+"\C-f": forward-word
