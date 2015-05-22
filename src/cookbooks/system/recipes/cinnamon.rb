@@ -1,7 +1,7 @@
 include_recipe "apt"
 
-apt_repository 'cinnamon-nightly' do
-	uri           'ppa:gwendal-lebihan-dev/cinnamon-nightly'
+apt_repository 'cinnamon' do
+	uri           'ppa:lestcape/cinnamon'
 	distribution  node['lsb']['codename']
 end
 
