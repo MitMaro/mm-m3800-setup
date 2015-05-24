@@ -1,0 +1,54 @@
+#!/bin/bash
+: '
+My personal profile - common functions
+By: Tim Oram
+'
+
+source_all() {
+	while [ $# -gt 0 ]; do
+		__DEBUG_MESSAGE "Sourcing: $1"
+		. "$1"
+		shift
+	done
+}
+
+new_random_number() {
+	local min=${1:-0}
+	local max=${2:-32767}
+	
+	# See if the min and max are reversed, if so reverse
+	if [ ${min} -gt ${max} ]; then
+		local x=${min}
+		min=${max}
+		max=${x}
+	fi
+	RAND=$((RANDOM%max+min))
+}
+
+# $? is 0 if contained, else 1
+array_contains() {
+	for e in "${@:2}"; do
+		[[ "$e" = "$1" ]]  && break;
+	done;
+}
+
+__compat() {
+	
+	local os=$(uname);
+	
+	if [[ "$os" == "Darwin" ]]; then
+		os="OSX"
+	fi
+	# check os matches filter provided in $1
+	if [[ $(echo $1 | grep $os) ]]; then
+		shift
+		eval "$*"
+	fi
+}
+
+__DEBUG_MESSAGE() {
+	__PROFILE_DEBUG=${__PROFILE_DEBUG:-false}
+	if ( $__PROFILE_DEBUG ); then
+		echo "$*"
+	fi
+}

@@ -1,0 +1,30 @@
+#!/bin/bash
+: '
+My personal profile
+By: Tim Oram
+'
+
+# If not running interactively, don't do anything
+[ -z "$PS1" ] && return
+
+# import functions, provides source_all function
+. ~/.bashrc.d/010-functions
+
+# reset PROMPT_COMMAND (needed for sourcing this file multiple times in a session)
+PROMPT_COMMAND=""
+
+# useful flag (local, development, production environment)
+export APP_ENV="local"
+
+# add colors to grep
+export GREP_OPTIONS='--color=auto'
+
+# make less more friendly for non-text input files, see lesspipe(1)
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+
+### End Settings ###
+
+# profile includes
+source_all ~/.bashrc.d/*
+
+
