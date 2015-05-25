@@ -12,6 +12,11 @@ directory "/home/mitmaro/.bashrc.d/" do
 	recursive true
 end
 
+template "/home/mitmaro/.bashrc.d/001-colors" do
+	source "dotfiles/bashrc.d/colors.erb"
+	action :create
+end
+
 template "/home/mitmaro/.bashrc.d/010-functions" do
 	source "dotfiles/bashrc.d/functions.erb"
 	action :create
