@@ -17,6 +17,11 @@ template "/home/mitmaro/.bashrc.d/001-colors" do
 	action :create
 end
 
+template "/home/mitmaro/.bashrc.d/001-environment" do
+	source "dotfiles/bashrc.d/environment.erb"
+	action :create
+end
+
 template "/home/mitmaro/.bashrc.d/010-functions" do
 	source "dotfiles/bashrc.d/functions.erb"
 	action :create
