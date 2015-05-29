@@ -22,6 +22,11 @@ template "/home/mitmaro/.bashrc.d/001-environment" do
 	action :create
 end
 
+template "/home/mitmaro/.bashrc.d/001-aliases" do
+	source "dotfiles/bashrc.d/aliases.erb"
+	action :create
+end
+
 template "/home/mitmaro/.bashrc.d/010-functions" do
 	source "dotfiles/bashrc.d/functions.erb"
 	action :create
