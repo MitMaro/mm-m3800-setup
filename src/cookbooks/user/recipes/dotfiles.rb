@@ -41,3 +41,8 @@ template "/home/mitmaro/.bashrc.d/500-bash-settings" do
 	source "dotfiles/bashrc.d/bash-settings.erb"
 	action :create
 end
+
+template "/home/mitmaro/.bashrc.d/505-prompt" do
+	source "dotfiles/bashrc.d/prompt.erb"
+	action :create
+end

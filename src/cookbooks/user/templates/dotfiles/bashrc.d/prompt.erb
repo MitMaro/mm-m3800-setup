@@ -1,0 +1,58 @@
+#!/bin/bash
+: '
+Personal .profile - Command Prompt Setup
+By: Tim Oram
+#'
+
+# warn on missing git
+if [ ! `type -t git-rev-parse` ]; then
+	__DEBUG_MESSAGE "git-rev-parse mising, git prompt disabled."
+fi
+
+___check_git() {
+	local base_dir
+	base_dir=$(git-rev-parse --show-cdup 2>/dev/null) || return 1
+	echo -e "$COLOR_GREEN(${COLOR_YELLOW}GIT$COLOR_GREEN) "
+}
+
+___check_git_branch_info() {
+	local base_dir modified_count
+
+	base_dir=$(git-rev-parse --show-cdup 2>/dev/null) || return 1
+	
+	modified_count=`git status --porcelain -uno | wc -l`
+	if (( $modified_count > 0 )); then
+		echo -e "  $COLOR_GREEN($COLOR_RED$(__git_ps1 "%s")$COLOR_GREEN)"
+	else
+		echo -e "  $COLOR_GREEN($COLOR_LIGHT_GREY$(__git_ps1 "%s")$COLOR_GREEN)"
+	fi
+	
+}
+
+___prompt_setup() {
+	local EXITSTATUS="$?" user_color prompt_color prompt_symbol date_now
+	date_now=`date "+%g-%m-%d %H:%M:%S"`
+
+	if [[ $UID -eq 0 ]]; then
+		user_color=$COLOR_RED
+	else
+		user_color=${__PROMPT_USER_COLOR:-$COLOR_DARK_CYAN}
+	fi
+	prompt_color=$COLOR_GREEN
+
+	if [[ $EXITSTATUS -eq 0 ]]; then
+		prompt_symbol="\[$COLOR_GREEN\]$EXITSTATUS\[$COLOR_NORMAL\]"
+	else
+		prompt_symbol="\[$COLOR_RED\]$EXITSTATUS"
+	fi
+	PS1="\[$prompt_color\]┌─ \[$COLOR_WHITE\]$date_now\[$prompt_color\] │ $prompt_symbol\[$prompt_color\] │\n\
+\[$prompt_color\]├⊂ \$(___check_git)\[$user_color\]\u \[$prompt_color\]\
+\w (\$(ls -1 | wc -l | sed 's: ::g') files)\$(___check_git_branch_info)\
+\[$prompt_color\] \[$prompt_color\]\n\
+├⊂ \[$COLOR_NORMAL\]"
+	
+	PS2="\[$prompt_color\]├⊂ \[$COLOR_NORMAL\]"
+	
+}
+
+PROMPT_COMMAND="___prompt_setup;" #$PROMPT_COMMAND
