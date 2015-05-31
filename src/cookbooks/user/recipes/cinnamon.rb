@@ -1,8 +1,17 @@
 require 'json'
 
+directory "/home/mitmaro/.cinnamon/configs/panel-launchers@cinnamon.org" do
+	recursive true
+end
+
 template "/home/mitmaro/.cinnamon/configs/panel-launchers@cinnamon.org/2.json" do
 	source "cinnamon/configs/panel-launchers@cinnamon.org"
 	action :create
+end
+
+
+directory "/home/mitmaro/.cinnamon/configs/calendar@cinnamon.org" do
+	recursive true
 end
 
 template "/home/mitmaro/.cinnamon/configs/calendar@cinnamon.org/13.json" do
