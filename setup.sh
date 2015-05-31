@@ -2,10 +2,15 @@
 
 RUBY_VERSION=2.2
 
+ensure_root () {
+	sudo --prompt="Root required, please enter password: " --validate
+}
+
 dpkg -s curl &> /dev/null
 
 if [ $? -ne 0 ]; then
 	echo "curl not installed, installing"
+	ensure_root
 	sudo apt-get install curl
 fi
 
