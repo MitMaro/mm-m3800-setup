@@ -8,4 +8,4 @@ cookbook 'system',
 	:path => 'src/cookbooks/system'
 cookbook 'user',
 	:path => 'src/cookbooks/user'
-
+cookbook 'nodejs', '~> 2.4.0'

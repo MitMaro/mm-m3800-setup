@@ -8,3 +8,5 @@ end
 package "nodejs" do
 	action :install
 end
+
+nodejs_npm "n"
