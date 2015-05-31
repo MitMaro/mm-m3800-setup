@@ -43,7 +43,7 @@ while [[ $# > 0 ]]; do
 	shift
 done
 
-./setup.sh
+source ./setup.sh
 
 librarian-chef install || exit $?
 
