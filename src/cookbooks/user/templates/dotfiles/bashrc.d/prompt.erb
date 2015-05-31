@@ -31,7 +31,7 @@ ___check_git_branch_info() {
 
 ___prompt_setup() {
 	local EXITSTATUS="$?" user_color prompt_color prompt_symbol date_now
-	date_now=`date "+%g-%m-%d %H:%M:%S"`
+	date_now=`date "+%g-%m-%d %H:%M:%S.%N"`
 
 	if [[ $UID -eq 0 ]]; then
 		user_color=$COLOR_RED
@@ -45,14 +45,13 @@ ___prompt_setup() {
 	else
 		prompt_symbol="\[$COLOR_RED\]$EXITSTATUS"
 	fi
-	PS1="\[$prompt_color\]┌─ \[$COLOR_WHITE\]$date_now\[$prompt_color\] │ $prompt_symbol\[$prompt_color\] │\n\
-\[$prompt_color\]├⊂ \$(___check_git)\[$user_color\]\u \[$prompt_color\]\
+	PS1="\[$prompt_color\]└─┨$prompt_symbol\[$prompt_color\]┃ \[$COLOR_WHITE\]$date_now\[$prompt_color\]\n\n\
+\[$prompt_color\]┌ \$(___check_git)\[$user_color\]\u \[$prompt_color\]\
 \w (\$(ls -1 | wc -l | sed 's: ::g') files)\$(___check_git_branch_info)\
 \[$prompt_color\] \[$prompt_color\]\n\
-├⊂ \[$COLOR_NORMAL\]"
+├▪ \[$COLOR_NORMAL\]"
 	
-	PS2="\[$prompt_color\]├⊂ \[$COLOR_NORMAL\]"
-	
+	PS2="\[$prompt_color\]├▫ \[$COLOR_NORMAL\]"
 }
 
 PROMPT_COMMAND="___prompt_setup;" #$PROMPT_COMMAND
