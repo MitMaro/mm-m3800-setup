@@ -14,6 +14,12 @@ if [ $? -ne 0 ]; then
 	sudo apt-get install curl
 fi
 
+command -v chef-client &> /dev/null
+if [ $? -ne 0 ]; then
+	echo "chef not installed, installing"
+	ensure_root
+	curl -L https://www.chef.io/chef/install.sh | sudo bash
+fi
 
  if [ ! -e ~/.rvm/scripts/rvm ]; then
 	echo "rvm not installed, installing"
