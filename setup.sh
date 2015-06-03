@@ -11,7 +11,7 @@ dpkg -s curl &> /dev/null
 if [ $? -ne 0 ]; then
 	echo "curl not installed, installing"
 	ensure_root
-	sudo apt-get install curl
+	sudo apt-get -y  install curl
 fi
 
 command -v chef-client &> /dev/null
