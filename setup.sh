@@ -21,24 +21,18 @@ if [ $? -ne 0 ]; then
 	curl -L https://www.chef.io/chef/install.sh | sudo bash
 fi
 
- if [ ! -e ~/.rvm/scripts/rvm ]; then
-	echo "rvm not installed, installing"
-	gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
-	curl -sSL https://get.rvm.io | bash -s stable --ruby
- fi
-
-source /home/mitmaro/.rvm/scripts/rvm
-
-rubyversion=`rvm list strings | grep $RUBY_VERSION`
-if [ -z $rubyversion ]; then
-	echo "ruby $RUBY_VERSION not installed, installing"
-	rvm install $RUBY_VERSION
+command -v ruby &> /dev/null
+if [ $? -ne 0 ]; then
+	echo "ruby not installed, installing"
+	ensure_root
+	sudo apt-add-repository ppa:brightbox/ruby-ng
+	sudo apt-get update
+	sudo apt-get -y install ruby2.2 ruby2.2-dev
 fi
-
-rvm use $RUBY_VERSION &> /dev/null
 
 librarian=`gem list -i librarian-chef`
 if [ $librarian == "false" ]; then
 	echo "librarian chef not installed, installing"
-	gem install librarian-chef
+	ensure_root
+	sudo gem install librarian-chef
 fi
