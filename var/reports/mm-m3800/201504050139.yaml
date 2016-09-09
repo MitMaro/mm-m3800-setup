@@ -1,0 +1,259 @@
+--- !ruby/object:Puppet::Transaction::Report
+  metrics: 
+    resources: !ruby/object:Puppet::Util::Metric
+      name: resources
+      label: Resources
+      values: 
+        - - total
+          - Total
+          - 7
+        - - skipped
+          - Skipped
+          - 0
+        - - failed
+          - Failed
+          - 0
+        - - failed_to_restart
+          - "Failed to restart"
+          - 0
+        - - restarted
+          - Restarted
+          - 0
+        - - changed
+          - Changed
+          - 0
+        - - out_of_sync
+          - "Out of sync"
+          - 0
+        - - scheduled
+          - Scheduled
+          - 0
+    time: !ruby/object:Puppet::Util::Metric
+      name: time
+      label: Time
+      values: 
+        - - schedule
+          - Schedule
+          - 0.00019736000000000002
+        - - filebucket
+          - Filebucket
+          - 3.7181e-05
+        - - config_retrieval
+          - "Config retrieval"
+          - 0.032620661
+        - - total
+          - Total
+          - 0.032855202
+    changes: !ruby/object:Puppet::Util::Metric
+      name: changes
+      label: Changes
+      values: 
+        - - total
+          - Total
+          - 0
+    events: !ruby/object:Puppet::Util::Metric
+      name: events
+      label: Events
+      values: 
+        - - total
+          - Total
+          - 0
+        - - failure
+          - Failure
+          - 0
+        - - success
+          - Success
+          - 0
+  logs: 
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym debug
+      tags: 
+        - debug
+      message: "Loaded state in 0.00 seconds"
+      source: Puppet
+      time: 2015-04-04 23:09:57.415632 -02:30
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym info
+      tags: 
+        - info
+      message: "Applying configuration version '1428197997'"
+      source: Puppet
+      time: 2015-04-04 23:09:57.416562 -02:30
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym debug
+      tags: 
+        - debug
+      message: "Finishing transaction 21196960"
+      source: Puppet
+      time: 2015-04-04 23:09:57.418042 -02:30
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym debug
+      tags: 
+        - debug
+      message: "Storing state"
+      source: Puppet
+      time: 2015-04-04 23:09:57.418094 -02:30
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym debug
+      tags: 
+        - debug
+      message: "Stored state in 0.01 seconds"
+      source: Puppet
+      time: 2015-04-04 23:09:57.426026 -02:30
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+      message: "Finished catalog run in 0.01 seconds"
+      source: Puppet
+      time: 2015-04-04 23:09:57.426105 -02:30
+  resource_statuses: 
+    Schedule[daily]: !ruby/object:Puppet::Resource::Status
+      resource: Schedule[daily]
+      file: 
+      line: 
+      evaluation_time: 5.0721e-05
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - schedule
+        - daily
+      time: 2015-04-04 23:09:57.416840 -02:30
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Schedule
+      title: daily
+      skipped: false
+      failed: false
+      containment_path: 
+        - Schedule[daily]
+    Schedule[monthly]: !ruby/object:Puppet::Resource::Status
+      resource: Schedule[monthly]
+      file: 
+      line: 
+      evaluation_time: 3.3162e-05
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - schedule
+        - monthly
+      time: 2015-04-04 23:09:57.416957 -02:30
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Schedule
+      title: monthly
+      skipped: false
+      failed: false
+      containment_path: 
+        - Schedule[monthly]
+    Schedule[hourly]: !ruby/object:Puppet::Resource::Status
+      resource: Schedule[hourly]
+      file: 
+      line: 
+      evaluation_time: 2.7569e-05
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - schedule
+        - hourly
+      time: 2015-04-04 23:09:57.417044 -02:30
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Schedule
+      title: hourly
+      skipped: false
+      failed: false
+      containment_path: 
+        - Schedule[hourly]
+    Schedule[never]: !ruby/object:Puppet::Resource::Status
+      resource: Schedule[never]
+      file: 
+      line: 
+      evaluation_time: 3.0006e-05
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - schedule
+        - never
+      time: 2015-04-04 23:09:57.417535 -02:30
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Schedule
+      title: never
+      skipped: false
+      failed: false
+      containment_path: 
+        - Schedule[never]
+    Filebucket[puppet]: !ruby/object:Puppet::Resource::Status
+      resource: Filebucket[puppet]
+      file: 
+      line: 
+      evaluation_time: 3.7181e-05
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - filebucket
+        - puppet
+      time: 2015-04-04 23:09:57.417635 -02:30
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Filebucket
+      title: puppet
+      skipped: false
+      failed: false
+      containment_path: 
+        - Filebucket[puppet]
+    Schedule[weekly]: !ruby/object:Puppet::Resource::Status
+      resource: Schedule[weekly]
+      file: 
+      line: 
+      evaluation_time: 2.8201e-05
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - schedule
+        - weekly
+      time: 2015-04-04 23:09:57.417729 -02:30
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Schedule
+      title: weekly
+      skipped: false
+      failed: false
+      containment_path: 
+        - Schedule[weekly]
+    Schedule[puppet]: !ruby/object:Puppet::Resource::Status
+      resource: Schedule[puppet]
+      file: 
+      line: 
+      evaluation_time: 2.7701e-05
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - schedule
+        - puppet
+      time: 2015-04-04 23:09:57.417812 -02:30
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Schedule
+      title: puppet
+      skipped: false
+      failed: false
+      containment_path: 
+        - Schedule[puppet]
+  host: mm-m3800
+  time: 2015-04-04 23:09:57.412114 -02:30
+  kind: apply
+  report_format: 4
+  puppet_version: "3.7.5"
+  configuration_version: 1428197997
+  transaction_uuid: "8b38e9d7-6353-4fb9-be18-ca184da4e95f"
+  environment: production
+  status: unchanged

@@ -1,0 +1,190 @@
+--- 
+  File[/home/mitmaro/.puppet]: 
+    !ruby/sym checked: 2015-04-04 22:41:44.165163 -02:30
+  File[/home/mitmaro/.puppet/ssl]: 
+    !ruby/sym checked: 2015-04-04 22:41:44.165447 -02:30
+    !ruby/sym synced: 2015-04-04 22:41:44.165751 -02:30
+  File[/home/mitmaro/.puppet/ssl/private]: 
+    !ruby/sym checked: 2015-04-04 22:41:44.166007 -02:30
+    !ruby/sym synced: 2015-04-04 22:41:44.166164 -02:30
+  File[/home/mitmaro/.puppet/var]: 
+    !ruby/sym checked: 2015-04-04 22:41:44.166346 -02:30
+    !ruby/sym synced: 2015-04-04 22:41:44.166476 -02:30
+  File[/home/mitmaro/.puppet/var/client_yaml]: 
+    !ruby/sym checked: 2015-04-04 22:41:44.166717 -02:30
+    !ruby/sym synced: 2015-04-04 22:41:44.166873 -02:30
+  File[/home/mitmaro/.puppet/var/log]: 
+    !ruby/sym checked: 2015-04-04 22:41:44.167064 -02:30
+    !ruby/sym synced: 2015-04-04 22:41:44.167216 -02:30
+  File[/home/mitmaro/.puppet/var/run]: 
+    !ruby/sym checked: 2015-04-04 22:41:44.167412 -02:30
+    !ruby/sym synced: 2015-04-04 22:41:44.167560 -02:30
+  File[/home/mitmaro/.puppet/var/facts.d]: 
+    !ruby/sym checked: 2015-04-04 22:41:44.167751 -02:30
+    !ruby/sym synced: 2015-04-04 22:41:44.167870 -02:30
+  File[/home/mitmaro/.puppet/var/clientbucket]: 
+    !ruby/sym checked: 2015-04-04 22:41:44.168067 -02:30
+    !ruby/sym synced: 2015-04-04 22:41:44.168213 -02:30
+  File[/home/mitmaro/.puppet/var/lib]: 
+    !ruby/sym checked: 2015-04-04 22:41:44.168404 -02:30
+    !ruby/sym synced: 2015-04-04 22:41:44.168550 -02:30
+  File[/home/mitmaro/.puppet/ssl/private_keys]: 
+    !ruby/sym checked: 2015-04-04 22:41:44.168755 -02:30
+    !ruby/sym synced: 2015-04-04 22:41:44.168902 -02:30
+  File[/home/mitmaro/.puppet/var/state]: 
+    !ruby/sym checked: 2015-04-04 22:41:44.169111 -02:30
+    !ruby/sym synced: 2015-04-04 22:41:44.169259 -02:30
+  File[/home/mitmaro/.puppet/var/state/graphs]: 
+    !ruby/sym checked: 2015-04-04 22:41:44.169466 -02:30
+    !ruby/sym synced: 2015-04-04 22:41:44.169589 -02:30
+  File[/home/mitmaro/.puppet/ssl/public_keys]: 
+    !ruby/sym checked: 2015-04-04 22:41:44.169778 -02:30
+    !ruby/sym synced: 2015-04-04 22:41:44.169923 -02:30
+  File[/home/mitmaro/.puppet/var/client_data]: 
+    !ruby/sym checked: 2015-04-04 22:41:44.170116 -02:30
+    !ruby/sym synced: 2015-04-04 22:41:44.170260 -02:30
+  File[/home/mitmaro/.puppet/ssl/certificate_requests]: 
+    !ruby/sym checked: 2015-04-04 22:41:44.170452 -02:30
+    !ruby/sym synced: 2015-04-04 22:41:44.170605 -02:30
+  File[/home/mitmaro/.puppet/ssl/certs]: 
+    !ruby/sym checked: 2015-04-04 22:41:44.170788 -02:30
+    !ruby/sym synced: 2015-04-04 22:41:44.170936 -02:30
+  !ruby/sym configuration: {}
+  Schedule[daily]: 
+    !ruby/sym checked: 2015-04-08 22:40:11.909123 -02:30
+  Schedule[monthly]: 
+    !ruby/sym checked: 2015-04-08 22:40:11.909229 -02:30
+  Schedule[hourly]: 
+    !ruby/sym checked: 2015-04-08 22:40:11.909315 -02:30
+  Stage[main]: 
+    !ruby/sym checked: 2015-04-08 22:40:11.909427 -02:30
+  Class[Main]: 
+    !ruby/sym checked: 2015-04-08 22:40:11.910390 -02:30
+  Class[Settings]: 
+    !ruby/sym checked: 2015-04-08 22:40:11.909927 -02:30
+  Schedule[never]: 
+    !ruby/sym checked: 2015-04-08 22:40:11.910019 -02:30
+  Filebucket[puppet]: 
+    !ruby/sym checked: 2015-04-08 22:40:11.910128 -02:30
+  Schedule[weekly]: 
+    !ruby/sym checked: 2015-04-08 22:40:11.910218 -02:30
+  Schedule[puppet]: 
+    !ruby/sym checked: 2015-04-08 22:40:11.910305 -02:30
+  Package[vim]: 
+    !ruby/sym checked: 2015-04-05 01:18:18.074992 -02:30
+  Node[mm-m3800]: 
+    !ruby/sym checked: 2015-04-08 22:40:11.909730 -02:30
+  Class[Vim]: 
+    !ruby/sym checked: 2015-04-05 01:18:17.979147 -02:30
+  Class[Git]: 
+    !ruby/sym checked: 2015-04-08 22:40:11.910480 -02:30
+  Package[git]: 
+    !ruby/sym checked: 2015-04-08 22:40:11.965234 -02:30
+  "Git::Config[color.pager]": 
+    !ruby/sym checked: 2015-04-08 22:40:11.991167 -02:30
+  "Git::Config[color.diff.frag]": 
+    !ruby/sym checked: 2015-04-08 22:40:11.991463 -02:30
+  "Git::Config[user.name]": 
+    !ruby/sym checked: 2015-04-08 22:40:11.991741 -02:30
+  "Git::Config[color.status.untracked]": 
+    !ruby/sym checked: 2015-04-08 22:40:11.992011 -02:30
+  "Git::Config[color.status.changed]": 
+    !ruby/sym checked: 2015-04-08 22:40:11.992239 -02:30
+  "Git::Config[alias.ci]": 
+    !ruby/sym checked: 2015-04-08 22:40:11.992490 -02:30
+  Git_config[color.pager]: 
+    !ruby/sym checked: 2015-04-08 22:40:12.010384 -02:30
+  "Git::Config[alias.br]": 
+    !ruby/sym checked: 2015-04-08 22:40:12.026366 -02:30
+  "Git::Config[color.branch.local]": 
+    !ruby/sym checked: 2015-04-08 22:40:12.026640 -02:30
+  "Git::Config[alias.co]": 
+    !ruby/sym checked: 2015-04-08 22:40:12.026873 -02:30
+  "Git::Config[color.core.pager]": 
+    !ruby/sym checked: 2015-04-08 22:33:07.787200 -02:30
+  Git_config[color.status.untracked]: 
+    !ruby/sym checked: 2015-04-08 22:40:12.075899 -02:30
+  Git_config[color.branch.local]: 
+    !ruby/sym checked: 2015-04-08 22:40:12.164859 -02:30
+  "Git::Config[color.branch]": 
+    !ruby/sym checked: 2015-04-08 22:40:12.204998 -02:30
+  Git_config[color.branch]: 
+    !ruby/sym checked: 2015-04-08 22:40:12.250888 -02:30
+  "Git::Config[color.diff.old]": 
+    !ruby/sym checked: 2015-04-08 22:40:12.287444 -02:30
+  Git_config[color.diff.old]: 
+    !ruby/sym checked: 2015-04-08 22:40:12.330969 -02:30
+  "Git::Config[color.diff.new]": 
+    !ruby/sym checked: 2015-04-08 22:40:12.370092 -02:30
+  Git_config[color.diff.new]: 
+    !ruby/sym checked: 2015-04-08 22:40:12.416214 -02:30
+  Git_config[color.core.pager]: 
+    !ruby/sym checked: 2015-04-08 22:33:07.809185 -02:30
+  Git_config[user.name]: 
+    !ruby/sym checked: 2015-04-08 22:40:12.471369 -02:30
+  "Git::Config[alias.undo]": 
+    !ruby/sym checked: 2015-04-08 22:40:12.496303 -02:30
+  "Git::Config[color.status.added]": 
+    !ruby/sym checked: 2015-04-08 22:40:12.496527 -02:30
+  Git_config[color.status.added]: 
+    !ruby/sym checked: 2015-04-08 22:40:12.510324 -02:30
+  "Git::Config[color.ui]": 
+    !ruby/sym checked: 2015-04-08 22:40:12.528817 -02:30
+  Git_config[color.ui]: 
+    !ruby/sym checked: 2015-04-08 22:40:12.543018 -02:30
+  "Git::Config[color.diff.meta]": 
+    !ruby/sym checked: 2015-04-08 22:40:12.561948 -02:30
+  Git_config[alias.ci]: 
+    !ruby/sym checked: 2015-04-08 22:40:12.575913 -02:30
+  "Git::Config[core.whitespace]": 
+    !ruby/sym checked: 2015-04-08 22:40:12.594683 -02:30
+  Git_config[core.whitespace]: 
+    !ruby/sym checked: 2015-04-08 22:40:12.609817 -02:30
+  Git_config[alias.undo]: 
+    !ruby/sym checked: 2015-04-08 22:40:12.762071 -02:30
+  Git_config[alias.co]: 
+    !ruby/sym checked: 2015-04-08 22:40:12.838367 -02:30
+  "Git::Config[color.branch.remote]": 
+    !ruby/sym checked: 2015-04-08 22:40:12.874585 -02:30
+  Git_config[color.branch.remote]: 
+    !ruby/sym checked: 2015-04-08 22:40:12.914799 -02:30
+  "Git::Config[user.email]": 
+    !ruby/sym checked: 2015-04-08 22:40:12.952129 -02:30
+  Git_config[user.email]: 
+    !ruby/sym checked: 2015-04-08 22:40:12.991795 -02:30
+  Git_config[color.diff.frag]: 
+    !ruby/sym checked: 2015-04-08 22:40:13.032367 -02:30
+  "Git::Config[color.diff]": 
+    !ruby/sym checked: 2015-04-08 22:40:13.052410 -02:30
+  Git_config[color.diff]: 
+    !ruby/sym checked: 2015-04-08 22:40:13.069769 -02:30
+  "Git::Config[color.status]": 
+    !ruby/sym checked: 2015-04-08 22:40:13.093173 -02:30
+  Git_config[color.status]: 
+    !ruby/sym checked: 2015-04-08 22:40:13.114052 -02:30
+  "Git::Config[alias.pretty]": 
+    !ruby/sym checked: 2015-04-08 22:40:13.137114 -02:30
+  Git_config[alias.pretty]: 
+    !ruby/sym checked: 2015-04-08 22:40:13.157068 -02:30
+  "Git::Config[alias.st]": 
+    !ruby/sym checked: 2015-04-08 22:40:13.171635 -02:30
+  Git_config[alias.st]: 
+    !ruby/sym checked: 2015-04-08 22:40:13.217104 -02:30
+  Git_config[color.diff.meta]: 
+    !ruby/sym checked: 2015-04-08 22:40:13.294675 -02:30
+  Git_config[color.status.changed]: 
+    !ruby/sym checked: 2015-04-08 22:40:13.372016 -02:30
+  "Git::Config[color.branch.current]": 
+    !ruby/sym checked: 2015-04-08 22:40:13.410461 -02:30
+  Git_config[color.branch.current]: 
+    !ruby/sym checked: 2015-04-08 22:40:13.449944 -02:30
+  Git_config[alias.br]: 
+    !ruby/sym checked: 2015-04-08 22:40:13.525909 -02:30
+  "Git::Config[color.interactive]": 
+    !ruby/sym checked: 2015-04-08 22:40:13.583318 -02:30
+  Git_config[color.interactive]: 
+    !ruby/sym checked: 2015-04-08 22:40:13.599866 -02:30
+  "Git::Config[core.pager]": 
+    !ruby/sym checked: 2015-04-08 22:40:12.647392 -02:30
+  Git_config[core.pager]: 
+    !ruby/sym checked: 2015-04-08 22:40:12.687519 -02:30

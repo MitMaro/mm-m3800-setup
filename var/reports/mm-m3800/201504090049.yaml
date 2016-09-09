@@ -1,0 +1,465 @@
+--- !ruby/object:Puppet::Transaction::Report
+  metrics: 
+    resources: !ruby/object:Puppet::Util::Metric
+      name: resources
+      label: Resources
+      values: 
+        - - total
+          - Total
+          - 10
+        - - skipped
+          - Skipped
+          - 0
+        - - failed
+          - Failed
+          - 2
+        - - failed_to_restart
+          - "Failed to restart"
+          - 0
+        - - restarted
+          - Restarted
+          - 0
+        - - changed
+          - Changed
+          - 0
+        - - out_of_sync
+          - "Out of sync"
+          - 2
+        - - scheduled
+          - Scheduled
+          - 0
+    time: !ruby/object:Puppet::Util::Metric
+      name: time
+      label: Time
+      values: 
+        - - schedule
+          - Schedule
+          - 0.000200674
+        - - filebucket
+          - Filebucket
+          - 4.0033e-05
+        - - package
+          - Package
+          - 0.020486001
+        - - git_config
+          - "Git config"
+          - 0.11870813699999999
+        - - config_retrieval
+          - "Config retrieval"
+          - 0.138454907
+        - - total
+          - Total
+          - 0.277889752
+    changes: !ruby/object:Puppet::Util::Metric
+      name: changes
+      label: Changes
+      values: 
+        - - total
+          - Total
+          - 0
+    events: !ruby/object:Puppet::Util::Metric
+      name: events
+      label: Events
+      values: 
+        - - total
+          - Total
+          - 2
+        - - failure
+          - Failure
+          - 2
+        - - success
+          - Success
+          - 0
+  logs: 
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym debug
+      tags: 
+        - debug
+      message: "Loaded state in 0.00 seconds"
+      source: Puppet
+      time: 2015-04-08 22:19:32.192679 -02:30
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym info
+      tags: 
+        - info
+      message: "Applying configuration version '1428540571'"
+      source: Puppet
+      time: 2015-04-08 22:19:32.194361 -02:30
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym debug
+      tags: 
+        - debug
+      message: "Prefetching apt resources for package"
+      source: Puppet
+      time: 2015-04-08 22:19:32.196210 -02:30
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym debug
+      tags: 
+        - debug
+      message: "Executing '/usr/bin/dpkg-query -W --showformat '${Status} ${Package} ${Version}\x5cn''"
+      source: Puppet
+      time: 2015-04-08 22:19:32.196279 -02:30
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym debug
+      tags: 
+        - debug
+      message: "Executing '/usr/bin/apt-cache policy git'"
+      source: Puppet
+      time: 2015-04-08 22:19:32.255666 -02:30
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym debug
+      tags: 
+        - debug
+      message: "Executing 'git config --global --get color.core.pager.color.core.pager'"
+      source: Puppet
+      time: 2015-04-08 22:19:32.276816 -02:30
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym debug
+      tags: 
+        - debug
+      message: "Executing 'git config --global color.core.pager.color.core.pager 'less -FRSX''"
+      source: Puppet
+      time: 2015-04-08 22:19:32.295121 -02:30
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      tags: 
+        - err
+      message: "Execution of 'git config --global color.core.pager.color.core.pager 'less -FRSX'' returned 1: "
+      source: Puppet
+      time: 2015-04-08 22:19:32.308193 -02:30
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      tags: 
+        - err
+        - git_config
+        - color.core.pager
+        - "git::config"
+        - git
+        - config
+        - class
+        - node
+        - mm-m3800
+      message: "change from  to less -FRSX failed: Execution of 'git config --global color.core.pager.color.core.pager 'less -FRSX'' returned 1: "
+      source: "/Stage[main]/Git/Git::Config[color.core.pager]/Git_config[color.core.pager]/value"
+      time: 2015-04-08 22:19:32.308498 -02:30
+      file: /home/mitmaro/.puppet/modules/git/manifests/config.pp
+      line: 68
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym debug
+      tags: 
+        - debug
+      message: "Executing 'git config --global --get core.whitespace'"
+      source: Puppet
+      time: 2015-04-08 22:19:32.309694 -02:30
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym debug
+      tags: 
+        - debug
+      message: "Executing 'git config --global core.whitespace 'fix,-indent-with-non-tab,trailing-space,cr-at-eol''"
+      source: Puppet
+      time: 2015-04-08 22:19:32.357764 -02:30
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      tags: 
+        - err
+      message: "Execution of 'git config --global core.whitespace 'fix,-indent-with-non-tab,trailing-space,cr-at-eol'' returned 1: "
+      source: Puppet
+      time: 2015-04-08 22:19:32.395580 -02:30
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      tags: 
+        - err
+        - git_config
+        - core.whitespace
+        - "git::config"
+        - git
+        - config
+        - class
+        - node
+        - mm-m3800
+      message: "change from  to fix,-indent-with-non-tab,trailing-space,cr-at-eol failed: Execution of 'git config --global core.whitespace 'fix,-indent-with-non-tab,trailing-space,cr-at-eol'' returned 1: "
+      source: "/Stage[main]/Git/Git::Config[core.whitespace]/Git_config[core.whitespace]/value"
+      time: 2015-04-08 22:19:32.395827 -02:30
+      file: /home/mitmaro/.puppet/modules/git/manifests/config.pp
+      line: 68
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym debug
+      tags: 
+        - debug
+      message: "Finishing transaction 20277040"
+      source: Puppet
+      time: 2015-04-08 22:19:32.396171 -02:30
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym debug
+      tags: 
+        - debug
+      message: "Storing state"
+      source: Puppet
+      time: 2015-04-08 22:19:32.396220 -02:30
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym debug
+      tags: 
+        - debug
+      message: "Stored state in 0.01 seconds"
+      source: Puppet
+      time: 2015-04-08 22:19:32.407296 -02:30
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+      message: "Finished catalog run in 0.22 seconds"
+      source: Puppet
+      time: 2015-04-08 22:19:32.407511 -02:30
+  resource_statuses: 
+    Schedule[daily]: !ruby/object:Puppet::Resource::Status
+      resource: Schedule[daily]
+      file: 
+      line: 
+      evaluation_time: 4.8736e-05
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - schedule
+        - daily
+      time: 2015-04-08 22:19:32.194665 -02:30
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Schedule
+      title: daily
+      skipped: false
+      failed: false
+      containment_path: 
+        - Schedule[daily]
+    Schedule[monthly]: !ruby/object:Puppet::Resource::Status
+      resource: Schedule[monthly]
+      file: 
+      line: 
+      evaluation_time: 3.1032e-05
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - schedule
+        - monthly
+      time: 2015-04-08 22:19:32.194782 -02:30
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Schedule
+      title: monthly
+      skipped: false
+      failed: false
+      containment_path: 
+        - Schedule[monthly]
+    Schedule[hourly]: !ruby/object:Puppet::Resource::Status
+      resource: Schedule[hourly]
+      file: 
+      line: 
+      evaluation_time: 3.0014e-05
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - schedule
+        - hourly
+      time: 2015-04-08 22:19:32.194871 -02:30
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Schedule
+      title: hourly
+      skipped: false
+      failed: false
+      containment_path: 
+        - Schedule[hourly]
+    Schedule[never]: !ruby/object:Puppet::Resource::Status
+      resource: Schedule[never]
+      file: 
+      line: 
+      evaluation_time: 3.1517e-05
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - schedule
+        - never
+      time: 2015-04-08 22:19:32.195594 -02:30
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Schedule
+      title: never
+      skipped: false
+      failed: false
+      containment_path: 
+        - Schedule[never]
+    Filebucket[puppet]: !ruby/object:Puppet::Resource::Status
+      resource: Filebucket[puppet]
+      file: 
+      line: 
+      evaluation_time: 4.0033e-05
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - filebucket
+        - puppet
+      time: 2015-04-08 22:19:32.195694 -02:30
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Filebucket
+      title: puppet
+      skipped: false
+      failed: false
+      containment_path: 
+        - Filebucket[puppet]
+    Schedule[weekly]: !ruby/object:Puppet::Resource::Status
+      resource: Schedule[weekly]
+      file: 
+      line: 
+      evaluation_time: 3.0077e-05
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - schedule
+        - weekly
+      time: 2015-04-08 22:19:32.195793 -02:30
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Schedule
+      title: weekly
+      skipped: false
+      failed: false
+      containment_path: 
+        - Schedule[weekly]
+    Schedule[puppet]: !ruby/object:Puppet::Resource::Status
+      resource: Schedule[puppet]
+      file: 
+      line: 
+      evaluation_time: 2.9298e-05
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - schedule
+        - puppet
+      time: 2015-04-08 22:19:32.195880 -02:30
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Schedule
+      title: puppet
+      skipped: false
+      failed: false
+      containment_path: 
+        - Schedule[puppet]
+    Package[git]: !ruby/object:Puppet::Resource::Status
+      resource: Package[git]
+      file: /home/mitmaro/.puppet/manifests/git.pp
+      line: 4
+      evaluation_time: 0.020486001
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - package
+        - git
+        - class
+        - node
+        - mm-m3800
+      time: 2015-04-08 22:19:32.255407 -02:30
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Package
+      title: git
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - Git
+        - Package[git]
+    Git_config[color.core.pager]: !ruby/object:Puppet::Resource::Status
+      resource: Git_config[color.core.pager]
+      file: /home/mitmaro/.puppet/modules/git/manifests/config.pp
+      line: 68
+      evaluation_time: 0.032134853
+      change_count: 0
+      out_of_sync_count: 1
+      tags: 
+        - git_config
+        - color.core.pager
+        - "git::config"
+        - git
+        - config
+        - class
+        - node
+        - mm-m3800
+      time: 2015-04-08 22:19:32.276483 -02:30
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: value
+          previous_value: ""
+          desired_value: "less -FRSX"
+          historical_value: 
+          message: "change from  to less -FRSX failed: Execution of 'git config --global color.core.pager.color.core.pager 'less -FRSX'' returned 1: "
+          name: !ruby/sym value_changed
+          status: failure
+          time: 2015-04-08 22:19:32.308408 -02:30
+      out_of_sync: true
+      changed: false
+      resource_type: Git_config
+      title: color.core.pager
+      skipped: false
+      failed: true
+      containment_path: 
+        - Stage[main]
+        - Git
+        - "Git::Config[color.core.pager]"
+        - Git_config[color.core.pager]
+    Git_config[core.whitespace]: !ruby/object:Puppet::Resource::Status
+      resource: Git_config[core.whitespace]
+      file: /home/mitmaro/.puppet/modules/git/manifests/config.pp
+      line: 68
+      evaluation_time: 0.086573284
+      change_count: 0
+      out_of_sync_count: 1
+      tags: 
+        - git_config
+        - core.whitespace
+        - "git::config"
+        - git
+        - config
+        - class
+        - node
+        - mm-m3800
+      time: 2015-04-08 22:19:32.309328 -02:30
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: value
+          previous_value: ""
+          desired_value: "fix,-indent-with-non-tab,trailing-space,cr-at-eol"
+          historical_value: 
+          message: "change from  to fix,-indent-with-non-tab,trailing-space,cr-at-eol failed: Execution of 'git config --global core.whitespace 'fix,-indent-with-non-tab,trailing-space,cr-at-eol'' returned 1: "
+          name: !ruby/sym value_changed
+          status: failure
+          time: 2015-04-08 22:19:32.395777 -02:30
+      out_of_sync: true
+      changed: false
+      resource_type: Git_config
+      title: core.whitespace
+      skipped: false
+      failed: true
+      containment_path: 
+        - Stage[main]
+        - Git
+        - "Git::Config[core.whitespace]"
+        - Git_config[core.whitespace]
+  host: mm-m3800
+  time: 2015-04-08 22:19:32.186447 -02:30
+  kind: apply
+  report_format: 4
+  puppet_version: "3.7.5"
+  configuration_version: 1428540571
+  transaction_uuid: "932363b6-b046-41fb-99a5-a43fd0ef9ae6"
+  environment: production
+  status: failed

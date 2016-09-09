@@ -1,0 +1,1893 @@
+--- !ruby/object:Puppet::Transaction::Report
+  metrics: 
+    resources: !ruby/object:Puppet::Util::Metric
+      name: resources
+      label: Resources
+      values: 
+        - - total
+          - Total
+          - 34
+        - - skipped
+          - Skipped
+          - 0
+        - - failed
+          - Failed
+          - 26
+        - - failed_to_restart
+          - "Failed to restart"
+          - 0
+        - - restarted
+          - Restarted
+          - 0
+        - - changed
+          - Changed
+          - 0
+        - - out_of_sync
+          - "Out of sync"
+          - 26
+        - - scheduled
+          - Scheduled
+          - 0
+    time: !ruby/object:Puppet::Util::Metric
+      name: time
+      label: Time
+      values: 
+        - - schedule
+          - Schedule
+          - 0.000204696
+        - - filebucket
+          - Filebucket
+          - 4.1231e-05
+        - - package
+          - Package
+          - 0.020867086
+        - - git_config
+          - "Git config"
+          - 1.5700427929999998
+        - - config_retrieval
+          - "Config retrieval"
+          - 0.178447507
+        - - total
+          - Total
+          - 1.7696033129999997
+    changes: !ruby/object:Puppet::Util::Metric
+      name: changes
+      label: Changes
+      values: 
+        - - total
+          - Total
+          - 0
+    events: !ruby/object:Puppet::Util::Metric
+      name: events
+      label: Events
+      values: 
+        - - total
+          - Total
+          - 26
+        - - failure
+          - Failure
+          - 26
+        - - success
+          - Success
+          - 0
+  logs: 
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      tags: 
+        - err
+      message: "Execution of 'cd / ; git config --global color.pager 'true'' returned 1: "
+      source: Puppet
+      time: 2015-04-08 22:34:28.031434 -02:30
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      tags: 
+        - err
+        - git_config
+        - color.pager
+        - "git::config"
+        - git
+        - config
+        - class
+        - node
+        - mm-m3800
+      message: "change from  to true failed: Execution of 'cd / ; git config --global color.pager 'true'' returned 1: "
+      source: "/Stage[main]/Git/Git::Config[color.pager]/Git_config[color.pager]/value"
+      time: 2015-04-08 22:34:28.031731 -02:30
+      file: /home/mitmaro/.puppet/modules/git/manifests/config.pp
+      line: 72
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      tags: 
+        - err
+      message: "Execution of 'cd / ; git config --global color.status.untracked 'cyan'' returned 1: "
+      source: Puppet
+      time: 2015-04-08 22:34:28.113518 -02:30
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      tags: 
+        - err
+        - git_config
+        - color.status.untracked
+        - "git::config"
+        - git
+        - config
+        - class
+        - node
+        - mm-m3800
+      message: "change from  to cyan failed: Execution of 'cd / ; git config --global color.status.untracked 'cyan'' returned 1: "
+      source: "/Stage[main]/Git/Git::Config[color.status.untracked]/Git_config[color.status.untracked]/value"
+      time: 2015-04-08 22:34:28.113759 -02:30
+      file: /home/mitmaro/.puppet/modules/git/manifests/config.pp
+      line: 72
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      tags: 
+        - err
+      message: "Execution of 'cd / ; git config --global color.branch.local 'yellow'' returned 1: "
+      source: Puppet
+      time: 2015-04-08 22:34:28.196004 -02:30
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      tags: 
+        - err
+        - git_config
+        - color.branch.local
+        - "git::config"
+        - git
+        - config
+        - class
+        - node
+        - mm-m3800
+      message: "change from  to yellow failed: Execution of 'cd / ; git config --global color.branch.local 'yellow'' returned 1: "
+      source: "/Stage[main]/Git/Git::Config[color.branch.local]/Git_config[color.branch.local]/value"
+      time: 2015-04-08 22:34:28.196261 -02:30
+      file: /home/mitmaro/.puppet/modules/git/manifests/config.pp
+      line: 72
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      tags: 
+        - err
+      message: "Execution of 'cd / ; git config --global color.branch 'auto'' returned 1: "
+      source: Puppet
+      time: 2015-04-08 22:34:28.278500 -02:30
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      tags: 
+        - err
+        - git_config
+        - color.branch
+        - "git::config"
+        - git
+        - config
+        - class
+        - node
+        - mm-m3800
+      message: "change from  to auto failed: Execution of 'cd / ; git config --global color.branch 'auto'' returned 1: "
+      source: "/Stage[main]/Git/Git::Config[color.branch]/Git_config[color.branch]/value"
+      time: 2015-04-08 22:34:28.278767 -02:30
+      file: /home/mitmaro/.puppet/modules/git/manifests/config.pp
+      line: 72
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      tags: 
+        - err
+      message: "Execution of 'cd / ; git config --global color.diff.old 'red bold'' returned 1: "
+      source: Puppet
+      time: 2015-04-08 22:34:28.367009 -02:30
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      tags: 
+        - err
+        - git_config
+        - color.diff.old
+        - "git::config"
+        - git
+        - config
+        - class
+        - node
+        - mm-m3800
+      message: "change from  to red bold failed: Execution of 'cd / ; git config --global color.diff.old 'red bold'' returned 1: "
+      source: "/Stage[main]/Git/Git::Config[color.diff.old]/Git_config[color.diff.old]/value"
+      time: 2015-04-08 22:34:28.367244 -02:30
+      file: /home/mitmaro/.puppet/modules/git/manifests/config.pp
+      line: 72
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      tags: 
+        - err
+      message: "Execution of 'cd / ; git config --global color.diff.new 'green bold'' returned 1: "
+      source: Puppet
+      time: 2015-04-08 22:34:28.452655 -02:30
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      tags: 
+        - err
+        - git_config
+        - color.diff.new
+        - "git::config"
+        - git
+        - config
+        - class
+        - node
+        - mm-m3800
+      message: "change from  to green bold failed: Execution of 'cd / ; git config --global color.diff.new 'green bold'' returned 1: "
+      source: "/Stage[main]/Git/Git::Config[color.diff.new]/Git_config[color.diff.new]/value"
+      time: 2015-04-08 22:34:28.453293 -02:30
+      file: /home/mitmaro/.puppet/modules/git/manifests/config.pp
+      line: 72
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      tags: 
+        - err
+      message: "Execution of 'cd / ; git config --global user.name 'Tim Oram'' returned 1: "
+      source: Puppet
+      time: 2015-04-08 22:34:28.503618 -02:30
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      tags: 
+        - err
+        - git_config
+        - user.name
+        - "git::config"
+        - git
+        - config
+        - class
+        - node
+        - mm-m3800
+      message: "change from  to Tim Oram failed: Execution of 'cd / ; git config --global user.name 'Tim Oram'' returned 1: "
+      source: "/Stage[main]/Git/Git::Config[user.name]/Git_config[user.name]/value"
+      time: 2015-04-08 22:34:28.503969 -02:30
+      file: /home/mitmaro/.puppet/modules/git/manifests/config.pp
+      line: 72
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      tags: 
+        - err
+      message: "Execution of 'cd / ; git config --global color.status.added 'yellow'' returned 1: "
+      source: Puppet
+      time: 2015-04-08 22:34:28.548697 -02:30
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      tags: 
+        - err
+        - git_config
+        - color.status.added
+        - "git::config"
+        - git
+        - config
+        - class
+        - node
+        - mm-m3800
+      message: "change from  to yellow failed: Execution of 'cd / ; git config --global color.status.added 'yellow'' returned 1: "
+      source: "/Stage[main]/Git/Git::Config[color.status.added]/Git_config[color.status.added]/value"
+      time: 2015-04-08 22:34:28.549141 -02:30
+      file: /home/mitmaro/.puppet/modules/git/manifests/config.pp
+      line: 72
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      tags: 
+        - err
+      message: "Execution of 'cd / ; git config --global color.ui 'true'' returned 1: "
+      source: Puppet
+      time: 2015-04-08 22:34:28.590520 -02:30
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      tags: 
+        - err
+        - git_config
+        - color.ui
+        - "git::config"
+        - git
+        - config
+        - class
+        - node
+        - mm-m3800
+      message: "change from  to true failed: Execution of 'cd / ; git config --global color.ui 'true'' returned 1: "
+      source: "/Stage[main]/Git/Git::Config[color.ui]/Git_config[color.ui]/value"
+      time: 2015-04-08 22:34:28.590814 -02:30
+      file: /home/mitmaro/.puppet/modules/git/manifests/config.pp
+      line: 72
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      tags: 
+        - err
+      message: "Execution of 'cd / ; git config --global alias.ci 'commit'' returned 1: "
+      source: Puppet
+      time: 2015-04-08 22:34:28.622452 -02:30
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      tags: 
+        - err
+        - git_config
+        - alias.ci
+        - "git::config"
+        - git
+        - config
+        - class
+        - node
+        - mm-m3800
+      message: "change from  to commit failed: Execution of 'cd / ; git config --global alias.ci 'commit'' returned 1: "
+      source: "/Stage[main]/Git/Git::Config[alias.ci]/Git_config[alias.ci]/value"
+      time: 2015-04-08 22:34:28.622749 -02:30
+      file: /home/mitmaro/.puppet/modules/git/manifests/config.pp
+      line: 72
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      tags: 
+        - err
+      message: "Execution of 'cd / ; git config --global core.whitespace 'fix,-indent-with-non-tab,trailing-space,cr-at-eol'' returned 1: "
+      source: Puppet
+      time: 2015-04-08 22:34:28.675335 -02:30
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      tags: 
+        - err
+        - git_config
+        - core.whitespace
+        - "git::config"
+        - git
+        - config
+        - class
+        - node
+        - mm-m3800
+      message: "change from  to fix,-indent-with-non-tab,trailing-space,cr-at-eol failed: Execution of 'cd / ; git config --global core.whitespace 'fix,-indent-with-non-tab,trailing-space,cr-at-eol'' returned 1: "
+      source: "/Stage[main]/Git/Git::Config[core.whitespace]/Git_config[core.whitespace]/value"
+      time: 2015-04-08 22:34:28.675648 -02:30
+      file: /home/mitmaro/.puppet/modules/git/manifests/config.pp
+      line: 72
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      tags: 
+        - err
+      message: "Execution of 'cd / ; git config --global core.pager 'less -FRSX'' returned 1: "
+      source: Puppet
+      time: 2015-04-08 22:34:28.751183 -02:30
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      tags: 
+        - err
+        - git_config
+        - core.pager
+        - "git::config"
+        - git
+        - config
+        - class
+        - node
+        - mm-m3800
+      message: "change from  to less -FRSX failed: Execution of 'cd / ; git config --global core.pager 'less -FRSX'' returned 1: "
+      source: "/Stage[main]/Git/Git::Config[core.pager]/Git_config[core.pager]/value"
+      time: 2015-04-08 22:34:28.751453 -02:30
+      file: /home/mitmaro/.puppet/modules/git/manifests/config.pp
+      line: 72
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      tags: 
+        - err
+      message: "Execution of 'cd / ; git config --global alias.undo 'reset --soft HEAD^'' returned 1: "
+      source: Puppet
+      time: 2015-04-08 22:34:28.826564 -02:30
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      tags: 
+        - err
+        - git_config
+        - alias.undo
+        - "git::config"
+        - git
+        - config
+        - class
+        - node
+        - mm-m3800
+      message: "change from  to reset --soft HEAD^ failed: Execution of 'cd / ; git config --global alias.undo 'reset --soft HEAD^'' returned 1: "
+      source: "/Stage[main]/Git/Git::Config[alias.undo]/Git_config[alias.undo]/value"
+      time: 2015-04-08 22:34:28.826829 -02:30
+      file: /home/mitmaro/.puppet/modules/git/manifests/config.pp
+      line: 72
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      tags: 
+        - err
+      message: "Execution of 'cd / ; git config --global alias.co 'checkout'' returned 1: "
+      source: Puppet
+      time: 2015-04-08 22:34:28.899891 -02:30
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      tags: 
+        - err
+        - git_config
+        - alias.co
+        - "git::config"
+        - git
+        - config
+        - class
+        - node
+        - mm-m3800
+      message: "change from  to checkout failed: Execution of 'cd / ; git config --global alias.co 'checkout'' returned 1: "
+      source: "/Stage[main]/Git/Git::Config[alias.co]/Git_config[alias.co]/value"
+      time: 2015-04-08 22:34:28.900165 -02:30
+      file: /home/mitmaro/.puppet/modules/git/manifests/config.pp
+      line: 72
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      tags: 
+        - err
+      message: "Execution of 'cd / ; git config --global color.branch.remote 'green'' returned 1: "
+      source: Puppet
+      time: 2015-04-08 22:34:28.973829 -02:30
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      tags: 
+        - err
+        - git_config
+        - color.branch.remote
+        - "git::config"
+        - git
+        - config
+        - class
+        - node
+        - mm-m3800
+      message: "change from  to green failed: Execution of 'cd / ; git config --global color.branch.remote 'green'' returned 1: "
+      source: "/Stage[main]/Git/Git::Config[color.branch.remote]/Git_config[color.branch.remote]/value"
+      time: 2015-04-08 22:34:28.974083 -02:30
+      file: /home/mitmaro/.puppet/modules/git/manifests/config.pp
+      line: 72
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      tags: 
+        - err
+      message: "Execution of 'cd / ; git config --global user.email 'mitmaro@gmail.com'' returned 1: "
+      source: Puppet
+      time: 2015-04-08 22:34:29.026068 -02:30
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      tags: 
+        - err
+        - git_config
+        - user.email
+        - "git::config"
+        - git
+        - config
+        - class
+        - node
+        - mm-m3800
+      message: "change from  to mitmaro@gmail.com failed: Execution of 'cd / ; git config --global user.email 'mitmaro@gmail.com'' returned 1: "
+      source: "/Stage[main]/Git/Git::Config[user.email]/Git_config[user.email]/value"
+      time: 2015-04-08 22:34:29.026499 -02:30
+      file: /home/mitmaro/.puppet/modules/git/manifests/config.pp
+      line: 72
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      tags: 
+        - err
+      message: "Execution of 'cd / ; git config --global color.diff.frag 'magenta bold'' returned 1: "
+      source: Puppet
+      time: 2015-04-08 22:34:29.059770 -02:30
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      tags: 
+        - err
+        - git_config
+        - color.diff.frag
+        - "git::config"
+        - git
+        - config
+        - class
+        - node
+        - mm-m3800
+      message: "change from  to magenta bold failed: Execution of 'cd / ; git config --global color.diff.frag 'magenta bold'' returned 1: "
+      source: "/Stage[main]/Git/Git::Config[color.diff.frag]/Git_config[color.diff.frag]/value"
+      time: 2015-04-08 22:34:29.060140 -02:30
+      file: /home/mitmaro/.puppet/modules/git/manifests/config.pp
+      line: 72
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      tags: 
+        - err
+      message: "Execution of 'cd / ; git config --global color.diff 'auto'' returned 1: "
+      source: Puppet
+      time: 2015-04-08 22:34:29.092962 -02:30
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      tags: 
+        - err
+        - git_config
+        - color.diff
+        - "git::config"
+        - git
+        - config
+        - class
+        - node
+        - mm-m3800
+      message: "change from  to auto failed: Execution of 'cd / ; git config --global color.diff 'auto'' returned 1: "
+      source: "/Stage[main]/Git/Git::Config[color.diff]/Git_config[color.diff]/value"
+      time: 2015-04-08 22:34:29.093313 -02:30
+      file: /home/mitmaro/.puppet/modules/git/manifests/config.pp
+      line: 72
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      tags: 
+        - err
+      message: "Execution of 'cd / ; git config --global color.status 'auto'' returned 1: "
+      source: Puppet
+      time: 2015-04-08 22:34:29.125405 -02:30
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      tags: 
+        - err
+        - git_config
+        - color.status
+        - "git::config"
+        - git
+        - config
+        - class
+        - node
+        - mm-m3800
+      message: "change from  to auto failed: Execution of 'cd / ; git config --global color.status 'auto'' returned 1: "
+      source: "/Stage[main]/Git/Git::Config[color.status]/Git_config[color.status]/value"
+      time: 2015-04-08 22:34:29.125727 -02:30
+      file: /home/mitmaro/.puppet/modules/git/manifests/config.pp
+      line: 72
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      tags: 
+        - err
+      message: "Execution of 'cd / ; git config --global alias.pretty 'log --graph --pretty=oneline'' returned 1: "
+      source: Puppet
+      time: 2015-04-08 22:34:29.155722 -02:30
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      tags: 
+        - err
+        - git_config
+        - alias.pretty
+        - "git::config"
+        - git
+        - config
+        - class
+        - node
+        - mm-m3800
+      message: "change from  to log --graph --pretty=oneline failed: Execution of 'cd / ; git config --global alias.pretty 'log --graph --pretty=oneline'' returned 1: "
+      source: "/Stage[main]/Git/Git::Config[alias.pretty]/Git_config[alias.pretty]/value"
+      time: 2015-04-08 22:34:29.156052 -02:30
+      file: /home/mitmaro/.puppet/modules/git/manifests/config.pp
+      line: 72
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      tags: 
+        - err
+      message: "Execution of 'cd / ; git config --global alias.st 'commit'' returned 1: "
+      source: Puppet
+      time: 2015-04-08 22:34:29.232873 -02:30
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      tags: 
+        - err
+        - git_config
+        - alias.st
+        - "git::config"
+        - git
+        - config
+        - class
+        - node
+        - mm-m3800
+      message: "change from  to commit failed: Execution of 'cd / ; git config --global alias.st 'commit'' returned 1: "
+      source: "/Stage[main]/Git/Git::Config[alias.st]/Git_config[alias.st]/value"
+      time: 2015-04-08 22:34:29.233162 -02:30
+      file: /home/mitmaro/.puppet/modules/git/manifests/config.pp
+      line: 72
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      tags: 
+        - err
+      message: "Execution of 'cd / ; git config --global color.diff.meta 'yellow bold'' returned 1: "
+      source: Puppet
+      time: 2015-04-08 22:34:29.305540 -02:30
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      tags: 
+        - err
+        - git_config
+        - color.diff.meta
+        - "git::config"
+        - git
+        - config
+        - class
+        - node
+        - mm-m3800
+      message: "change from  to yellow bold failed: Execution of 'cd / ; git config --global color.diff.meta 'yellow bold'' returned 1: "
+      source: "/Stage[main]/Git/Git::Config[color.diff.meta]/Git_config[color.diff.meta]/value"
+      time: 2015-04-08 22:34:29.305824 -02:30
+      file: /home/mitmaro/.puppet/modules/git/manifests/config.pp
+      line: 72
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      tags: 
+        - err
+      message: "Execution of 'cd / ; git config --global color.status.changed 'green'' returned 1: "
+      source: Puppet
+      time: 2015-04-08 22:34:29.383603 -02:30
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      tags: 
+        - err
+        - git_config
+        - color.status.changed
+        - "git::config"
+        - git
+        - config
+        - class
+        - node
+        - mm-m3800
+      message: "change from  to green failed: Execution of 'cd / ; git config --global color.status.changed 'green'' returned 1: "
+      source: "/Stage[main]/Git/Git::Config[color.status.changed]/Git_config[color.status.changed]/value"
+      time: 2015-04-08 22:34:29.383864 -02:30
+      file: /home/mitmaro/.puppet/modules/git/manifests/config.pp
+      line: 72
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      tags: 
+        - err
+      message: "Execution of 'cd / ; git config --global color.branch.current 'yellow reverse'' returned 1: "
+      source: Puppet
+      time: 2015-04-08 22:34:29.461095 -02:30
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      tags: 
+        - err
+        - git_config
+        - color.branch.current
+        - "git::config"
+        - git
+        - config
+        - class
+        - node
+        - mm-m3800
+      message: "change from  to yellow reverse failed: Execution of 'cd / ; git config --global color.branch.current 'yellow reverse'' returned 1: "
+      source: "/Stage[main]/Git/Git::Config[color.branch.current]/Git_config[color.branch.current]/value"
+      time: 2015-04-08 22:34:29.461352 -02:30
+      file: /home/mitmaro/.puppet/modules/git/manifests/config.pp
+      line: 72
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      tags: 
+        - err
+      message: "Execution of 'cd / ; git config --global alias.br 'branch'' returned 1: "
+      source: Puppet
+      time: 2015-04-08 22:34:29.535155 -02:30
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      tags: 
+        - err
+        - git_config
+        - alias.br
+        - "git::config"
+        - git
+        - config
+        - class
+        - node
+        - mm-m3800
+      message: "change from  to branch failed: Execution of 'cd / ; git config --global alias.br 'branch'' returned 1: "
+      source: "/Stage[main]/Git/Git::Config[alias.br]/Git_config[alias.br]/value"
+      time: 2015-04-08 22:34:29.551550 -02:30
+      file: /home/mitmaro/.puppet/modules/git/manifests/config.pp
+      line: 72
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      tags: 
+        - err
+      message: "Execution of 'cd / ; git config --global color.interactive 'auto'' returned 1: "
+      source: Puppet
+      time: 2015-04-08 22:34:29.593744 -02:30
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      tags: 
+        - err
+        - git_config
+        - color.interactive
+        - "git::config"
+        - git
+        - config
+        - class
+        - node
+        - mm-m3800
+      message: "change from  to auto failed: Execution of 'cd / ; git config --global color.interactive 'auto'' returned 1: "
+      source: "/Stage[main]/Git/Git::Config[color.interactive]/Git_config[color.interactive]/value"
+      time: 2015-04-08 22:34:29.594176 -02:30
+      file: /home/mitmaro/.puppet/modules/git/manifests/config.pp
+      line: 72
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+      message: "Finished catalog run in 1.69 seconds"
+      source: Puppet
+      time: 2015-04-08 22:34:29.611274 -02:30
+  resource_statuses: 
+    Schedule[daily]: !ruby/object:Puppet::Resource::Status
+      resource: Schedule[daily]
+      file: 
+      line: 
+      evaluation_time: 5.0672e-05
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - schedule
+        - daily
+      time: 2015-04-08 22:34:27.927959 -02:30
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Schedule
+      title: daily
+      skipped: false
+      failed: false
+      containment_path: 
+        - Schedule[daily]
+    Schedule[monthly]: !ruby/object:Puppet::Resource::Status
+      resource: Schedule[monthly]
+      file: 
+      line: 
+      evaluation_time: 3.1328e-05
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - schedule
+        - monthly
+      time: 2015-04-08 22:34:27.928080 -02:30
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Schedule
+      title: monthly
+      skipped: false
+      failed: false
+      containment_path: 
+        - Schedule[monthly]
+    Schedule[hourly]: !ruby/object:Puppet::Resource::Status
+      resource: Schedule[hourly]
+      file: 
+      line: 
+      evaluation_time: 3.0267e-05
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - schedule
+        - hourly
+      time: 2015-04-08 22:34:27.928168 -02:30
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Schedule
+      title: hourly
+      skipped: false
+      failed: false
+      containment_path: 
+        - Schedule[hourly]
+    Schedule[never]: !ruby/object:Puppet::Resource::Status
+      resource: Schedule[never]
+      file: 
+      line: 
+      evaluation_time: 3.3429e-05
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - schedule
+        - never
+      time: 2015-04-08 22:34:27.928901 -02:30
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Schedule
+      title: never
+      skipped: false
+      failed: false
+      containment_path: 
+        - Schedule[never]
+    Filebucket[puppet]: !ruby/object:Puppet::Resource::Status
+      resource: Filebucket[puppet]
+      file: 
+      line: 
+      evaluation_time: 4.1231e-05
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - filebucket
+        - puppet
+      time: 2015-04-08 22:34:27.929006 -02:30
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Filebucket
+      title: puppet
+      skipped: false
+      failed: false
+      containment_path: 
+        - Filebucket[puppet]
+    Schedule[weekly]: !ruby/object:Puppet::Resource::Status
+      resource: Schedule[weekly]
+      file: 
+      line: 
+      evaluation_time: 3.0295e-05
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - schedule
+        - weekly
+      time: 2015-04-08 22:34:27.929109 -02:30
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Schedule
+      title: weekly
+      skipped: false
+      failed: false
+      containment_path: 
+        - Schedule[weekly]
+    Schedule[puppet]: !ruby/object:Puppet::Resource::Status
+      resource: Schedule[puppet]
+      file: 
+      line: 
+      evaluation_time: 2.8705e-05
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - schedule
+        - puppet
+      time: 2015-04-08 22:34:27.929196 -02:30
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Schedule
+      title: puppet
+      skipped: false
+      failed: false
+      containment_path: 
+        - Schedule[puppet]
+    Package[git]: !ruby/object:Puppet::Resource::Status
+      resource: Package[git]
+      file: /home/mitmaro/.puppet/manifests/git.pp
+      line: 4
+      evaluation_time: 0.020867086
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - package
+        - git
+        - class
+        - node
+        - mm-m3800
+      time: 2015-04-08 22:34:27.984268 -02:30
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Package
+      title: git
+      skipped: false
+      failed: false
+      containment_path: 
+        - Stage[main]
+        - Git
+        - Package[git]
+    Git_config[color.pager]: !ruby/object:Puppet::Resource::Status
+      resource: Git_config[color.pager]
+      file: /home/mitmaro/.puppet/modules/git/manifests/config.pp
+      line: 72
+      evaluation_time: 0.025412544
+      change_count: 0
+      out_of_sync_count: 1
+      tags: 
+        - git_config
+        - color.pager
+        - "git::config"
+        - git
+        - config
+        - class
+        - node
+        - mm-m3800
+      time: 2015-04-08 22:34:28.006425 -02:30
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: value
+          previous_value: ""
+          desired_value: "true"
+          historical_value: 
+          message: "change from  to true failed: Execution of 'cd / ; git config --global color.pager 'true'' returned 1: "
+          name: !ruby/sym value_changed
+          status: failure
+          time: 2015-04-08 22:34:28.031655 -02:30
+      out_of_sync: true
+      changed: false
+      resource_type: Git_config
+      title: color.pager
+      skipped: false
+      failed: true
+      containment_path: 
+        - Stage[main]
+        - Git
+        - "Git::Config[color.pager]"
+        - Git_config[color.pager]
+    Git_config[color.status.untracked]: !ruby/object:Puppet::Resource::Status
+      resource: Git_config[color.status.untracked]
+      file: /home/mitmaro/.puppet/modules/git/manifests/config.pp
+      line: 72
+      evaluation_time: 0.081006229
+      change_count: 0
+      out_of_sync_count: 1
+      tags: 
+        - git_config
+        - color.status.untracked
+        - "git::config"
+        - git
+        - config
+        - class
+        - node
+        - mm-m3800
+      time: 2015-04-08 22:34:28.032831 -02:30
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: value
+          previous_value: ""
+          desired_value: cyan
+          historical_value: 
+          message: "change from  to cyan failed: Execution of 'cd / ; git config --global color.status.untracked 'cyan'' returned 1: "
+          name: !ruby/sym value_changed
+          status: failure
+          time: 2015-04-08 22:34:28.113703 -02:30
+      out_of_sync: true
+      changed: false
+      resource_type: Git_config
+      title: color.status.untracked
+      skipped: false
+      failed: true
+      containment_path: 
+        - Stage[main]
+        - Git
+        - "Git::Config[color.status.untracked]"
+        - Git_config[color.status.untracked]
+    Git_config[color.branch.local]: !ruby/object:Puppet::Resource::Status
+      resource: Git_config[color.branch.local]
+      file: /home/mitmaro/.puppet/modules/git/manifests/config.pp
+      line: 72
+      evaluation_time: 0.082041667
+      change_count: 0
+      out_of_sync_count: 1
+      tags: 
+        - git_config
+        - color.branch.local
+        - "git::config"
+        - git
+        - config
+        - class
+        - node
+        - mm-m3800
+      time: 2015-04-08 22:34:28.114315 -02:30
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: value
+          previous_value: ""
+          desired_value: yellow
+          historical_value: 
+          message: "change from  to yellow failed: Execution of 'cd / ; git config --global color.branch.local 'yellow'' returned 1: "
+          name: !ruby/sym value_changed
+          status: failure
+          time: 2015-04-08 22:34:28.196180 -02:30
+      out_of_sync: true
+      changed: false
+      resource_type: Git_config
+      title: color.branch.local
+      skipped: false
+      failed: true
+      containment_path: 
+        - Stage[main]
+        - Git
+        - "Git::Config[color.branch.local]"
+        - Git_config[color.branch.local]
+    Git_config[color.branch]: !ruby/object:Puppet::Resource::Status
+      resource: Git_config[color.branch]
+      file: /home/mitmaro/.puppet/modules/git/manifests/config.pp
+      line: 72
+      evaluation_time: 0.081739688
+      change_count: 0
+      out_of_sync_count: 1
+      tags: 
+        - git_config
+        - color.branch
+        - "git::config"
+        - git
+        - config
+        - class
+        - node
+        - mm-m3800
+      time: 2015-04-08 22:34:28.197112 -02:30
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: value
+          previous_value: ""
+          desired_value: auto
+          historical_value: 
+          message: "change from  to auto failed: Execution of 'cd / ; git config --global color.branch 'auto'' returned 1: "
+          name: !ruby/sym value_changed
+          status: failure
+          time: 2015-04-08 22:34:28.278708 -02:30
+      out_of_sync: true
+      changed: false
+      resource_type: Git_config
+      title: color.branch
+      skipped: false
+      failed: true
+      containment_path: 
+        - Stage[main]
+        - Git
+        - "Git::Config[color.branch]"
+        - Git_config[color.branch]
+    Git_config[color.diff.old]: !ruby/object:Puppet::Resource::Status
+      resource: Git_config[color.diff.old]
+      file: /home/mitmaro/.puppet/modules/git/manifests/config.pp
+      line: 72
+      evaluation_time: 0.087831762
+      change_count: 0
+      out_of_sync_count: 1
+      tags: 
+        - git_config
+        - color.diff.old
+        - "git::config"
+        - git
+        - config
+        - class
+        - node
+        - mm-m3800
+      time: 2015-04-08 22:34:28.279510 -02:30
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: value
+          previous_value: ""
+          desired_value: "red bold"
+          historical_value: 
+          message: "change from  to red bold failed: Execution of 'cd / ; git config --global color.diff.old 'red bold'' returned 1: "
+          name: !ruby/sym value_changed
+          status: failure
+          time: 2015-04-08 22:34:28.367190 -02:30
+      out_of_sync: true
+      changed: false
+      resource_type: Git_config
+      title: color.diff.old
+      skipped: false
+      failed: true
+      containment_path: 
+        - Stage[main]
+        - Git
+        - "Git::Config[color.diff.old]"
+        - Git_config[color.diff.old]
+    Git_config[color.diff.new]: !ruby/object:Puppet::Resource::Status
+      resource: Git_config[color.diff.new]
+      file: /home/mitmaro/.puppet/modules/git/manifests/config.pp
+      line: 72
+      evaluation_time: 0.085665578
+      change_count: 0
+      out_of_sync_count: 1
+      tags: 
+        - git_config
+        - color.diff.new
+        - "git::config"
+        - git
+        - config
+        - class
+        - node
+        - mm-m3800
+      time: 2015-04-08 22:34:28.367933 -02:30
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: value
+          previous_value: ""
+          desired_value: "green bold"
+          historical_value: 
+          message: "change from  to green bold failed: Execution of 'cd / ; git config --global color.diff.new 'green bold'' returned 1: "
+          name: !ruby/sym value_changed
+          status: failure
+          time: 2015-04-08 22:34:28.453130 -02:30
+      out_of_sync: true
+      changed: false
+      resource_type: Git_config
+      title: color.diff.new
+      skipped: false
+      failed: true
+      containment_path: 
+        - Stage[main]
+        - Git
+        - "Git::Config[color.diff.new]"
+        - Git_config[color.diff.new]
+    Git_config[user.name]: !ruby/object:Puppet::Resource::Status
+      resource: Git_config[user.name]
+      file: /home/mitmaro/.puppet/modules/git/manifests/config.pp
+      line: 72
+      evaluation_time: 0.049623694
+      change_count: 0
+      out_of_sync_count: 1
+      tags: 
+        - git_config
+        - user.name
+        - "git::config"
+        - git
+        - config
+        - class
+        - node
+        - mm-m3800
+      time: 2015-04-08 22:34:28.454484 -02:30
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: value
+          previous_value: ""
+          desired_value: "Tim Oram"
+          historical_value: 
+          message: "change from  to Tim Oram failed: Execution of 'cd / ; git config --global user.name 'Tim Oram'' returned 1: "
+          name: !ruby/sym value_changed
+          status: failure
+          time: 2015-04-08 22:34:28.503894 -02:30
+      out_of_sync: true
+      changed: false
+      resource_type: Git_config
+      title: user.name
+      skipped: false
+      failed: true
+      containment_path: 
+        - Stage[main]
+        - Git
+        - "Git::Config[user.name]"
+        - Git_config[user.name]
+    Git_config[color.status.added]: !ruby/object:Puppet::Resource::Status
+      resource: Git_config[color.status.added]
+      file: /home/mitmaro/.puppet/modules/git/manifests/config.pp
+      line: 72
+      evaluation_time: 0.044102739
+      change_count: 0
+      out_of_sync_count: 1
+      tags: 
+        - git_config
+        - color.status.added
+        - "git::config"
+        - git
+        - config
+        - class
+        - node
+        - mm-m3800
+      time: 2015-04-08 22:34:28.505236 -02:30
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: value
+          previous_value: ""
+          desired_value: yellow
+          historical_value: 
+          message: "change from  to yellow failed: Execution of 'cd / ; git config --global color.status.added 'yellow'' returned 1: "
+          name: !ruby/sym value_changed
+          status: failure
+          time: 2015-04-08 22:34:28.549036 -02:30
+      out_of_sync: true
+      changed: false
+      resource_type: Git_config
+      title: color.status.added
+      skipped: false
+      failed: true
+      containment_path: 
+        - Stage[main]
+        - Git
+        - "Git::Config[color.status.added]"
+        - Git_config[color.status.added]
+    Git_config[color.ui]: !ruby/object:Puppet::Resource::Status
+      resource: Git_config[color.ui]
+      file: /home/mitmaro/.puppet/modules/git/manifests/config.pp
+      line: 72
+      evaluation_time: 0.040606375
+      change_count: 0
+      out_of_sync_count: 1
+      tags: 
+        - git_config
+        - color.ui
+        - "git::config"
+        - git
+        - config
+        - class
+        - node
+        - mm-m3800
+      time: 2015-04-08 22:34:28.550326 -02:30
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: value
+          previous_value: ""
+          desired_value: "true"
+          historical_value: 
+          message: "change from  to true failed: Execution of 'cd / ; git config --global color.ui 'true'' returned 1: "
+          name: !ruby/sym value_changed
+          status: failure
+          time: 2015-04-08 22:34:28.590752 -02:30
+      out_of_sync: true
+      changed: false
+      resource_type: Git_config
+      title: color.ui
+      skipped: false
+      failed: true
+      containment_path: 
+        - Stage[main]
+        - Git
+        - "Git::Config[color.ui]"
+        - Git_config[color.ui]
+    Git_config[alias.ci]: !ruby/object:Puppet::Resource::Status
+      resource: Git_config[alias.ci]
+      file: /home/mitmaro/.puppet/modules/git/manifests/config.pp
+      line: 72
+      evaluation_time: 0.031170247
+      change_count: 0
+      out_of_sync_count: 1
+      tags: 
+        - git_config
+        - alias.ci
+        - "git::config"
+        - git
+        - config
+        - class
+        - node
+        - mm-m3800
+      time: 2015-04-08 22:34:28.591702 -02:30
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: value
+          previous_value: ""
+          desired_value: commit
+          historical_value: 
+          message: "change from  to commit failed: Execution of 'cd / ; git config --global alias.ci 'commit'' returned 1: "
+          name: !ruby/sym value_changed
+          status: failure
+          time: 2015-04-08 22:34:28.622675 -02:30
+      out_of_sync: true
+      changed: false
+      resource_type: Git_config
+      title: alias.ci
+      skipped: false
+      failed: true
+      containment_path: 
+        - Stage[main]
+        - Git
+        - "Git::Config[alias.ci]"
+        - Git_config[alias.ci]
+    Git_config[core.whitespace]: !ruby/object:Puppet::Resource::Status
+      resource: Git_config[core.whitespace]
+      file: /home/mitmaro/.puppet/modules/git/manifests/config.pp
+      line: 72
+      evaluation_time: 0.052180522
+      change_count: 0
+      out_of_sync_count: 1
+      tags: 
+        - git_config
+        - core.whitespace
+        - "git::config"
+        - git
+        - config
+        - class
+        - node
+        - mm-m3800
+      time: 2015-04-08 22:34:28.623592 -02:30
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: value
+          previous_value: ""
+          desired_value: "fix,-indent-with-non-tab,trailing-space,cr-at-eol"
+          historical_value: 
+          message: "change from  to fix,-indent-with-non-tab,trailing-space,cr-at-eol failed: Execution of 'cd / ; git config --global core.whitespace 'fix,-indent-with-non-tab,trailing-space,cr-at-eol'' returned 1: "
+          name: !ruby/sym value_changed
+          status: failure
+          time: 2015-04-08 22:34:28.675574 -02:30
+      out_of_sync: true
+      changed: false
+      resource_type: Git_config
+      title: core.whitespace
+      skipped: false
+      failed: true
+      containment_path: 
+        - Stage[main]
+        - Git
+        - "Git::Config[core.whitespace]"
+        - Git_config[core.whitespace]
+    Git_config[core.pager]: !ruby/object:Puppet::Resource::Status
+      resource: Git_config[core.pager]
+      file: /home/mitmaro/.puppet/modules/git/manifests/config.pp
+      line: 72
+      evaluation_time: 0.075087818
+      change_count: 0
+      out_of_sync_count: 1
+      tags: 
+        - git_config
+        - core.pager
+        - "git::config"
+        - git
+        - config
+        - class
+        - node
+        - mm-m3800
+      time: 2015-04-08 22:34:28.676473 -02:30
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: value
+          previous_value: ""
+          desired_value: "less -FRSX"
+          historical_value: 
+          message: "change from  to less -FRSX failed: Execution of 'cd / ; git config --global core.pager 'less -FRSX'' returned 1: "
+          name: !ruby/sym value_changed
+          status: failure
+          time: 2015-04-08 22:34:28.751393 -02:30
+      out_of_sync: true
+      changed: false
+      resource_type: Git_config
+      title: core.pager
+      skipped: false
+      failed: true
+      containment_path: 
+        - Stage[main]
+        - Git
+        - "Git::Config[core.pager]"
+        - Git_config[core.pager]
+    Git_config[alias.undo]: !ruby/object:Puppet::Resource::Status
+      resource: Git_config[alias.undo]
+      file: /home/mitmaro/.puppet/modules/git/manifests/config.pp
+      line: 72
+      evaluation_time: 0.074943522
+      change_count: 0
+      out_of_sync_count: 1
+      tags: 
+        - git_config
+        - alias.undo
+        - "git::config"
+        - git
+        - config
+        - class
+        - node
+        - mm-m3800
+      time: 2015-04-08 22:34:28.751989 -02:30
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: value
+          previous_value: ""
+          desired_value: "reset --soft HEAD^"
+          historical_value: 
+          message: "change from  to reset --soft HEAD^ failed: Execution of 'cd / ; git config --global alias.undo 'reset --soft HEAD^'' returned 1: "
+          name: !ruby/sym value_changed
+          status: failure
+          time: 2015-04-08 22:34:28.826765 -02:30
+      out_of_sync: true
+      changed: false
+      resource_type: Git_config
+      title: alias.undo
+      skipped: false
+      failed: true
+      containment_path: 
+        - Stage[main]
+        - Git
+        - "Git::Config[alias.undo]"
+        - Git_config[alias.undo]
+    Git_config[alias.co]: !ruby/object:Puppet::Resource::Status
+      resource: Git_config[alias.co]
+      file: /home/mitmaro/.puppet/modules/git/manifests/config.pp
+      line: 72
+      evaluation_time: 0.072880199
+      change_count: 0
+      out_of_sync_count: 1
+      tags: 
+        - git_config
+        - alias.co
+        - "git::config"
+        - git
+        - config
+        - class
+        - node
+        - mm-m3800
+      time: 2015-04-08 22:34:28.827390 -02:30
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: value
+          previous_value: ""
+          desired_value: checkout
+          historical_value: 
+          message: "change from  to checkout failed: Execution of 'cd / ; git config --global alias.co 'checkout'' returned 1: "
+          name: !ruby/sym value_changed
+          status: failure
+          time: 2015-04-08 22:34:28.900103 -02:30
+      out_of_sync: true
+      changed: false
+      resource_type: Git_config
+      title: alias.co
+      skipped: false
+      failed: true
+      containment_path: 
+        - Stage[main]
+        - Git
+        - "Git::Config[alias.co]"
+        - Git_config[alias.co]
+    Git_config[color.branch.remote]: !ruby/object:Puppet::Resource::Status
+      resource: Git_config[color.branch.remote]
+      file: /home/mitmaro/.puppet/modules/git/manifests/config.pp
+      line: 72
+      evaluation_time: 0.073090834
+      change_count: 0
+      out_of_sync_count: 1
+      tags: 
+        - git_config
+        - color.branch.remote
+        - "git::config"
+        - git
+        - config
+        - class
+        - node
+        - mm-m3800
+      time: 2015-04-08 22:34:28.901090 -02:30
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: value
+          previous_value: ""
+          desired_value: green
+          historical_value: 
+          message: "change from  to green failed: Execution of 'cd / ; git config --global color.branch.remote 'green'' returned 1: "
+          name: !ruby/sym value_changed
+          status: failure
+          time: 2015-04-08 22:34:28.974021 -02:30
+      out_of_sync: true
+      changed: false
+      resource_type: Git_config
+      title: color.branch.remote
+      skipped: false
+      failed: true
+      containment_path: 
+        - Stage[main]
+        - Git
+        - "Git::Config[color.branch.remote]"
+        - Git_config[color.branch.remote]
+    Git_config[user.email]: !ruby/object:Puppet::Resource::Status
+      resource: Git_config[user.email]
+      file: /home/mitmaro/.puppet/modules/git/manifests/config.pp
+      line: 72
+      evaluation_time: 0.051857484
+      change_count: 0
+      out_of_sync_count: 1
+      tags: 
+        - git_config
+        - user.email
+        - "git::config"
+        - git
+        - config
+        - class
+        - node
+        - mm-m3800
+      time: 2015-04-08 22:34:28.974822 -02:30
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: value
+          previous_value: ""
+          desired_value: "mitmaro@gmail.com"
+          historical_value: 
+          message: "change from  to mitmaro@gmail.com failed: Execution of 'cd / ; git config --global user.email 'mitmaro@gmail.com'' returned 1: "
+          name: !ruby/sym value_changed
+          status: failure
+          time: 2015-04-08 22:34:29.026396 -02:30
+      out_of_sync: true
+      changed: false
+      resource_type: Git_config
+      title: user.email
+      skipped: false
+      failed: true
+      containment_path: 
+        - Stage[main]
+        - Git
+        - "Git::Config[user.email]"
+        - Git_config[user.email]
+    Git_config[color.diff.frag]: !ruby/object:Puppet::Resource::Status
+      resource: Git_config[color.diff.frag]
+      file: /home/mitmaro/.puppet/modules/git/manifests/config.pp
+      line: 72
+      evaluation_time: 0.033060454
+      change_count: 0
+      out_of_sync_count: 1
+      tags: 
+        - git_config
+        - color.diff.frag
+        - "git::config"
+        - git
+        - config
+        - class
+        - node
+        - mm-m3800
+      time: 2015-04-08 22:34:29.027236 -02:30
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: value
+          previous_value: ""
+          desired_value: "magenta bold"
+          historical_value: 
+          message: "change from  to magenta bold failed: Execution of 'cd / ; git config --global color.diff.frag 'magenta bold'' returned 1: "
+          name: !ruby/sym value_changed
+          status: failure
+          time: 2015-04-08 22:34:29.060053 -02:30
+      out_of_sync: true
+      changed: false
+      resource_type: Git_config
+      title: color.diff.frag
+      skipped: false
+      failed: true
+      containment_path: 
+        - Stage[main]
+        - Git
+        - "Git::Config[color.diff.frag]"
+        - Git_config[color.diff.frag]
+    Git_config[color.diff]: !ruby/object:Puppet::Resource::Status
+      resource: Git_config[color.diff]
+      file: /home/mitmaro/.puppet/modules/git/manifests/config.pp
+      line: 72
+      evaluation_time: 0.03234918
+      change_count: 0
+      out_of_sync_count: 1
+      tags: 
+        - git_config
+        - color.diff
+        - "git::config"
+        - git
+        - config
+        - class
+        - node
+        - mm-m3800
+      time: 2015-04-08 22:34:29.061129 -02:30
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: value
+          previous_value: ""
+          desired_value: auto
+          historical_value: 
+          message: "change from  to auto failed: Execution of 'cd / ; git config --global color.diff 'auto'' returned 1: "
+          name: !ruby/sym value_changed
+          status: failure
+          time: 2015-04-08 22:34:29.093225 -02:30
+      out_of_sync: true
+      changed: false
+      resource_type: Git_config
+      title: color.diff
+      skipped: false
+      failed: true
+      containment_path: 
+        - Stage[main]
+        - Git
+        - "Git::Config[color.diff]"
+        - Git_config[color.diff]
+    Git_config[color.status]: !ruby/object:Puppet::Resource::Status
+      resource: Git_config[color.status]
+      file: /home/mitmaro/.puppet/modules/git/manifests/config.pp
+      line: 72
+      evaluation_time: 0.031273143
+      change_count: 0
+      out_of_sync_count: 1
+      tags: 
+        - git_config
+        - color.status
+        - "git::config"
+        - git
+        - config
+        - class
+        - node
+        - mm-m3800
+      time: 2015-04-08 22:34:29.094620 -02:30
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: value
+          previous_value: ""
+          desired_value: auto
+          historical_value: 
+          message: "change from  to auto failed: Execution of 'cd / ; git config --global color.status 'auto'' returned 1: "
+          name: !ruby/sym value_changed
+          status: failure
+          time: 2015-04-08 22:34:29.125648 -02:30
+      out_of_sync: true
+      changed: false
+      resource_type: Git_config
+      title: color.status
+      skipped: false
+      failed: true
+      containment_path: 
+        - Stage[main]
+        - Git
+        - "Git::Config[color.status]"
+        - Git_config[color.status]
+    Git_config[alias.pretty]: !ruby/object:Puppet::Resource::Status
+      resource: Git_config[alias.pretty]
+      file: /home/mitmaro/.puppet/modules/git/manifests/config.pp
+      line: 72
+      evaluation_time: 0.029384008
+      change_count: 0
+      out_of_sync_count: 1
+      tags: 
+        - git_config
+        - alias.pretty
+        - "git::config"
+        - git
+        - config
+        - class
+        - node
+        - mm-m3800
+      time: 2015-04-08 22:34:29.126809 -02:30
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: value
+          previous_value: ""
+          desired_value: "log --graph --pretty=oneline"
+          historical_value: 
+          message: "change from  to log --graph --pretty=oneline failed: Execution of 'cd / ; git config --global alias.pretty 'log --graph --pretty=oneline'' returned 1: "
+          name: !ruby/sym value_changed
+          status: failure
+          time: 2015-04-08 22:34:29.155944 -02:30
+      out_of_sync: true
+      changed: false
+      resource_type: Git_config
+      title: alias.pretty
+      skipped: false
+      failed: true
+      containment_path: 
+        - Stage[main]
+        - Git
+        - "Git::Config[alias.pretty]"
+        - Git_config[alias.pretty]
+    Git_config[alias.st]: !ruby/object:Puppet::Resource::Status
+      resource: Git_config[alias.st]
+      file: /home/mitmaro/.puppet/modules/git/manifests/config.pp
+      line: 72
+      evaluation_time: 0.076116139
+      change_count: 0
+      out_of_sync_count: 1
+      tags: 
+        - git_config
+        - alias.st
+        - "git::config"
+        - git
+        - config
+        - class
+        - node
+        - mm-m3800
+      time: 2015-04-08 22:34:29.157154 -02:30
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: value
+          previous_value: ""
+          desired_value: commit
+          historical_value: 
+          message: "change from  to commit failed: Execution of 'cd / ; git config --global alias.st 'commit'' returned 1: "
+          name: !ruby/sym value_changed
+          status: failure
+          time: 2015-04-08 22:34:29.233099 -02:30
+      out_of_sync: true
+      changed: false
+      resource_type: Git_config
+      title: alias.st
+      skipped: false
+      failed: true
+      containment_path: 
+        - Stage[main]
+        - Git
+        - "Git::Config[alias.st]"
+        - Git_config[alias.st]
+    Git_config[color.diff.meta]: !ruby/object:Puppet::Resource::Status
+      resource: Git_config[color.diff.meta]
+      file: /home/mitmaro/.puppet/modules/git/manifests/config.pp
+      line: 72
+      evaluation_time: 0.072222771
+      change_count: 0
+      out_of_sync_count: 1
+      tags: 
+        - git_config
+        - color.diff.meta
+        - "git::config"
+        - git
+        - config
+        - class
+        - node
+        - mm-m3800
+      time: 2015-04-08 22:34:29.233715 -02:30
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: value
+          previous_value: ""
+          desired_value: "yellow bold"
+          historical_value: 
+          message: "change from  to yellow bold failed: Execution of 'cd / ; git config --global color.diff.meta 'yellow bold'' returned 1: "
+          name: !ruby/sym value_changed
+          status: failure
+          time: 2015-04-08 22:34:29.305760 -02:30
+      out_of_sync: true
+      changed: false
+      resource_type: Git_config
+      title: color.diff.meta
+      skipped: false
+      failed: true
+      containment_path: 
+        - Stage[main]
+        - Git
+        - "Git::Config[color.diff.meta]"
+        - Git_config[color.diff.meta]
+    Git_config[color.status.changed]: !ruby/object:Puppet::Resource::Status
+      resource: Git_config[color.status.changed]
+      file: /home/mitmaro/.puppet/modules/git/manifests/config.pp
+      line: 72
+      evaluation_time: 0.077470523
+      change_count: 0
+      out_of_sync_count: 1
+      tags: 
+        - git_config
+        - color.status.changed
+        - "git::config"
+        - git
+        - config
+        - class
+        - node
+        - mm-m3800
+      time: 2015-04-08 22:34:29.306488 -02:30
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: value
+          previous_value: ""
+          desired_value: green
+          historical_value: 
+          message: "change from  to green failed: Execution of 'cd / ; git config --global color.status.changed 'green'' returned 1: "
+          name: !ruby/sym value_changed
+          status: failure
+          time: 2015-04-08 22:34:29.383800 -02:30
+      out_of_sync: true
+      changed: false
+      resource_type: Git_config
+      title: color.status.changed
+      skipped: false
+      failed: true
+      containment_path: 
+        - Stage[main]
+        - Git
+        - "Git::Config[color.status.changed]"
+        - Git_config[color.status.changed]
+    Git_config[color.branch.current]: !ruby/object:Puppet::Resource::Status
+      resource: Git_config[color.branch.current]
+      file: /home/mitmaro/.puppet/modules/git/manifests/config.pp
+      line: 72
+      evaluation_time: 0.076875873
+      change_count: 0
+      out_of_sync_count: 1
+      tags: 
+        - git_config
+        - color.branch.current
+        - "git::config"
+        - git
+        - config
+        - class
+        - node
+        - mm-m3800
+      time: 2015-04-08 22:34:29.384578 -02:30
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: value
+          previous_value: ""
+          desired_value: "yellow reverse"
+          historical_value: 
+          message: "change from  to yellow reverse failed: Execution of 'cd / ; git config --global color.branch.current 'yellow reverse'' returned 1: "
+          name: !ruby/sym value_changed
+          status: failure
+          time: 2015-04-08 22:34:29.461292 -02:30
+      out_of_sync: true
+      changed: false
+      resource_type: Git_config
+      title: color.branch.current
+      skipped: false
+      failed: true
+      containment_path: 
+        - Stage[main]
+        - Git
+        - "Git::Config[color.branch.current]"
+        - Git_config[color.branch.current]
+    Git_config[alias.br]: !ruby/object:Puppet::Resource::Status
+      resource: Git_config[alias.br]
+      file: /home/mitmaro/.puppet/modules/git/manifests/config.pp
+      line: 72
+      evaluation_time: 0.089813462
+      change_count: 0
+      out_of_sync_count: 1
+      tags: 
+        - git_config
+        - alias.br
+        - "git::config"
+        - git
+        - config
+        - class
+        - node
+        - mm-m3800
+      time: 2015-04-08 22:34:29.461839 -02:30
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: value
+          previous_value: ""
+          desired_value: branch
+          historical_value: 
+          message: "change from  to branch failed: Execution of 'cd / ; git config --global alias.br 'branch'' returned 1: "
+          name: !ruby/sym value_changed
+          status: failure
+          time: 2015-04-08 22:34:29.551483 -02:30
+      out_of_sync: true
+      changed: false
+      resource_type: Git_config
+      title: alias.br
+      skipped: false
+      failed: true
+      containment_path: 
+        - Stage[main]
+        - Git
+        - "Git::Config[alias.br]"
+        - Git_config[alias.br]
+    Git_config[color.interactive]: !ruby/object:Puppet::Resource::Status
+      resource: Git_config[color.interactive]
+      file: /home/mitmaro/.puppet/modules/git/manifests/config.pp
+      line: 72
+      evaluation_time: 0.042236338
+      change_count: 0
+      out_of_sync_count: 1
+      tags: 
+        - git_config
+        - color.interactive
+        - "git::config"
+        - git
+        - config
+        - class
+        - node
+        - mm-m3800
+      time: 2015-04-08 22:34:29.552115 -02:30
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: value
+          previous_value: ""
+          desired_value: auto
+          historical_value: 
+          message: "change from  to auto failed: Execution of 'cd / ; git config --global color.interactive 'auto'' returned 1: "
+          name: !ruby/sym value_changed
+          status: failure
+          time: 2015-04-08 22:34:29.594076 -02:30
+      out_of_sync: true
+      changed: false
+      resource_type: Git_config
+      title: color.interactive
+      skipped: false
+      failed: true
+      containment_path: 
+        - Stage[main]
+        - Git
+        - "Git::Config[color.interactive]"
+        - Git_config[color.interactive]
+  host: mm-m3800
+  time: 2015-04-08 22:34:27.913048 -02:30
+  kind: apply
+  report_format: 4
+  puppet_version: "3.7.5"
+  configuration_version: 1428541467
+  transaction_uuid: "8faeecbb-c2e9-48b6-ac71-6c00b715fd7b"
+  environment: production
+  status: failed

@@ -1,0 +1,289 @@
+--- !ruby/object:Puppet::Transaction::Report
+  metrics: 
+    resources: !ruby/object:Puppet::Util::Metric
+      name: resources
+      label: Resources
+      values: 
+        - - total
+          - Total
+          - 8
+        - - skipped
+          - Skipped
+          - 0
+        - - failed
+          - Failed
+          - 1
+        - - failed_to_restart
+          - "Failed to restart"
+          - 0
+        - - restarted
+          - Restarted
+          - 0
+        - - changed
+          - Changed
+          - 0
+        - - out_of_sync
+          - "Out of sync"
+          - 1
+        - - scheduled
+          - Scheduled
+          - 0
+    time: !ruby/object:Puppet::Util::Metric
+      name: time
+      label: Time
+      values: 
+        - - schedule
+          - Schedule
+          - 0.000232502
+        - - package
+          - Package
+          - 0.087529854
+        - - filebucket
+          - Filebucket
+          - 0.0001219
+        - - config_retrieval
+          - "Config retrieval"
+          - 0.131320516
+        - - total
+          - Total
+          - 0.219204772
+    changes: !ruby/object:Puppet::Util::Metric
+      name: changes
+      label: Changes
+      values: 
+        - - total
+          - Total
+          - 0
+    events: !ruby/object:Puppet::Util::Metric
+      name: events
+      label: Events
+      values: 
+        - - total
+          - Total
+          - 1
+        - - failure
+          - Failure
+          - 1
+        - - success
+          - Success
+          - 0
+  logs: 
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      tags: 
+        - err
+      message: |-
+        Could not update: Execution of '/usr/bin/apt-get -q -y -o DPkg::Options::=--force-confold install vim' returned 100: E: Could not open lock file /var/lib/dpkg/lock - open (13: Permission denied)
+        E: Unable to lock the administration directory (/var/lib/dpkg/), are you root?
+      source: Puppet
+      time: 2015-04-05 01:18:18.106587 -02:30
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym err
+      tags: 
+        - err
+        - package
+        - vim
+        - class
+        - node
+        - mm-m3800
+      message: |-
+        change from purged to latest failed: Could not update: Execution of '/usr/bin/apt-get -q -y -o DPkg::Options::=--force-confold install vim' returned 100: E: Could not open lock file /var/lib/dpkg/lock - open (13: Permission denied)
+        E: Unable to lock the administration directory (/var/lib/dpkg/), are you root?
+      source: /Stage[main]/Vim/Package[vim]/ensure
+      time: 2015-04-05 01:18:18.106908 -02:30
+      file: /home/mitmaro/.puppet/manifests/vim.pp
+      line: 4
+    - !ruby/object:Puppet::Util::Log
+      level: !ruby/sym notice
+      tags: 
+        - notice
+      message: "Finished catalog run in 0.14 seconds"
+      source: Puppet
+      time: 2015-04-05 01:18:18.114751 -02:30
+  resource_statuses: 
+    Schedule[daily]: !ruby/object:Puppet::Resource::Status
+      resource: Schedule[daily]
+      file: 
+      line: 
+      evaluation_time: 4.6113e-05
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - schedule
+        - daily
+      time: 2015-04-05 01:18:17.978482 -02:30
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Schedule
+      title: daily
+      skipped: false
+      failed: false
+      containment_path: 
+        - Schedule[daily]
+    Schedule[monthly]: !ruby/object:Puppet::Resource::Status
+      resource: Schedule[monthly]
+      file: 
+      line: 
+      evaluation_time: 3.1022e-05
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - schedule
+        - monthly
+      time: 2015-04-05 01:18:17.978594 -02:30
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Schedule
+      title: monthly
+      skipped: false
+      failed: false
+      containment_path: 
+        - Schedule[monthly]
+    Schedule[hourly]: !ruby/object:Puppet::Resource::Status
+      resource: Schedule[hourly]
+      file: 
+      line: 
+      evaluation_time: 2.8508e-05
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - schedule
+        - hourly
+      time: 2015-04-05 01:18:17.978682 -02:30
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Schedule
+      title: hourly
+      skipped: false
+      failed: false
+      containment_path: 
+        - Schedule[hourly]
+    Schedule[never]: !ruby/object:Puppet::Resource::Status
+      resource: Schedule[never]
+      file: 
+      line: 
+      evaluation_time: 3.0726e-05
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - schedule
+        - never
+      time: 2015-04-05 01:18:17.979485 -02:30
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Schedule
+      title: never
+      skipped: false
+      failed: false
+      containment_path: 
+        - Schedule[never]
+    Package[vim]: !ruby/object:Puppet::Resource::Status
+      resource: Package[vim]
+      file: /home/mitmaro/.puppet/manifests/vim.pp
+      line: 4
+      evaluation_time: 0.087529854
+      change_count: 0
+      out_of_sync_count: 1
+      tags: 
+        - package
+        - vim
+        - class
+        - node
+        - mm-m3800
+      time: 2015-04-05 01:18:18.019476 -02:30
+      events: 
+        - !ruby/object:Puppet::Transaction::Event
+          audited: false
+          property: ensure
+          previous_value: !ruby/sym purged
+          desired_value: !ruby/sym latest
+          historical_value: 
+          message: |-
+            change from purged to latest failed: Could not update: Execution of '/usr/bin/apt-get -q -y -o DPkg::Options::=--force-confold install vim' returned 100: E: Could not open lock file /var/lib/dpkg/lock - open (13: Permission denied)
+            E: Unable to lock the administration directory (/var/lib/dpkg/), are you root?
+          name: !ruby/sym package_changed
+          status: failure
+          time: 2015-04-05 01:18:18.106821 -02:30
+      out_of_sync: true
+      changed: false
+      resource_type: Package
+      title: vim
+      skipped: false
+      failed: true
+      containment_path: 
+        - Stage[main]
+        - Vim
+        - Package[vim]
+    Filebucket[puppet]: !ruby/object:Puppet::Resource::Status
+      resource: Filebucket[puppet]
+      file: 
+      line: 
+      evaluation_time: 0.0001219
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - filebucket
+        - puppet
+      time: 2015-04-05 01:18:18.107336 -02:30
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Filebucket
+      title: puppet
+      skipped: false
+      failed: false
+      containment_path: 
+        - Filebucket[puppet]
+    Schedule[weekly]: !ruby/object:Puppet::Resource::Status
+      resource: Schedule[weekly]
+      file: 
+      line: 
+      evaluation_time: 6.2234e-05
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - schedule
+        - weekly
+      time: 2015-04-05 01:18:18.107579 -02:30
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Schedule
+      title: weekly
+      skipped: false
+      failed: false
+      containment_path: 
+        - Schedule[weekly]
+    Schedule[puppet]: !ruby/object:Puppet::Resource::Status
+      resource: Schedule[puppet]
+      file: 
+      line: 
+      evaluation_time: 3.3899e-05
+      change_count: 0
+      out_of_sync_count: 0
+      tags: 
+        - schedule
+        - puppet
+      time: 2015-04-05 01:18:18.107726 -02:30
+      events: []
+      out_of_sync: false
+      changed: false
+      resource_type: Schedule
+      title: puppet
+      skipped: false
+      failed: false
+      containment_path: 
+        - Schedule[puppet]
+  host: mm-m3800
+  time: 2015-04-05 01:18:17.973772 -02:30
+  kind: apply
+  report_format: 4
+  puppet_version: "3.7.5"
+  configuration_version: 1428205697
+  transaction_uuid: ef697918-e81f-415c-acb2-dd1f21171c65
+  environment: production
+  status: failed
